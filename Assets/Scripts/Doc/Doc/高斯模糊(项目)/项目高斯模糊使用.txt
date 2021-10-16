@@ -1,0 +1,2 @@
+首先申明一个UI Camera ，然后把高斯Camera那个脚本拉进去   。
+在Canvas下面弄一个全屏的RawImage ，接着其他设置一样即可

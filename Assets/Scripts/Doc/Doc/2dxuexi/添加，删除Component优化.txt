@@ -1,0 +1,4 @@
+1.添加Image 的时候 去掉raycastTarget
+2.添加Test的时候去掉raycastTarget和rich Test，字体设置为tengxiang
+
+3.移除Image，Test，将同时移除自动添加的CanvasRenderer

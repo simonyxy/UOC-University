@@ -1,0 +1,76 @@
+//window packmanager 
+//unity 2d sprite shape
+//
+//直接下载素材
+//
+//
+//
+//
+//
+//右键 Creat - Sprite Shape profile - 
+//
+//open shape
+//angle range 可视化移动范围
+//sprite 点击加号 把一张图片放进去
+//设置好了之后在窗口中创建一个2d object - sprite shape
+//把创建好的open shape 搞进去
+//
+//要修改这个sptrite shade的形状 要在inspector中选择 edit 
+//删除点按delete或者ctrl + delete 就可以删除
+//
+//is open end（是否闭合图像）可以调整
+//可以设置他的链接方式
+//
+//mesh tango 选择full rect
+//打开图片修改他的boder，就是可以设置他扩展模式
+//
+//添加碰撞器
+//可以使用edge colldier
+//
+//offset可以调整碰撞体位置
+//
+//
+//tilemap设置
+//
+//设置close shpae
+//初始化四个角度指针，四张图片
+//但是四个图片，中间是没有东西的，
+//上方有个fill ，就是中间填充的图形
+//
+//
+//
+//填充的图形必须是repeat的模式
+//图片设置为full rect
+//
+//添加collider ， polygen collider2d
+//调整offset 会贴合到平台上
+//
+//
+//会方便创建有台阶的图
+//
+//
+//使用tilemap
+//先把需要用到的tilemap图  pixel 设置为16，为了让他不模糊，wrap mode 改为 point
+//压缩改为none
+//
+//创建close shape名字叫tile grape
+//填充中心的时候不能使用tilemap 的素材了
+//要将中间的图做成一个单独的图
+//full rect point 和repeat 
+//
+//
+//
+//
+//Universal RP通用渲染管线使用指南
+//下载资源 ， 下载Universal RP
+//URP
+//creat Rendering - 》 下载Universal rendering pineline
+//默认会给我们创建3D的，我们要创建2D的
+//
+//后处理提升画质
+//先创建一个volume
+//new 一个profile
+//然后可以添加一些效果，如broom，
+//但是你发现并没有效果，那是因为相机没有开启炫光效果
+//
+//打开摄像机 ， 里面的rendering 里面有个post Poccesing，打开
