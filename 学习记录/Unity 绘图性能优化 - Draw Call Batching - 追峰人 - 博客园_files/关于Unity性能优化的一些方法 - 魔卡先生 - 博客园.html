@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://www.cnblogs.com/mrmocha/p/7977681.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+    <meta property="og:description" content="1.对于DrawCall的认识： DrawCall即为由CPU下达命令，调用OpenGL或DirectX接口进行解析并由GPU进行渲染显示的过程称为一次DrawCall。 在Unity中查看DrawC">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>关于Unity性能优化的一些方法 - 魔卡先生 - 博客园</title>
+    
+    <link rel="stylesheet" href="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/blog-common.min.css">
+    <link id="MainCss" rel="stylesheet" href="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/bundle-blacklowkey.min.css">
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/bundle-blacklowkey-mobile.min.css">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/mrmocha/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/mrmocha/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/mrmocha/wlwmanifest.xml">
+    <script src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/hm.js.下载"></script><script src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/amp4ads-host-v0.js.下载"></script><script src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/pubads_impl_rendering_2019103101.js.下载"></script><script async="" src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/analytics.js.下载"></script><script type="text/javascript" src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/encoder.js.下载"></script><script src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/jquery-2.2.0.min.js.下载"></script>
+    <script src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/blog-common.min.js.下载"></script>
+    <script>
+        var currentBlogId = 399142;
+        var currentBlogApp = 'mrmocha';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+    </script>
+    
+    
+    
+<link rel="preload" href="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/f.txt" as="script"><script type="text/javascript" src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/f.txt"></script><script src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/pubads_impl_2019103101.js.下载" async=""></script><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-36/html/container.html"></head>
+<body rlt="1" style="">
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/mrmocha/"><img id="blogLogo" src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/logo.gif" alt="返回主页"></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/mrmocha/">魔卡先生</a>
+</h1>
+<h2>
+你的名字，就是我的故事！
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/mrmocha/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E9%AD%94%E5%8D%A1%E5%85%88%E7%94%9F">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/mrmocha/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+36&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+1</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/mrmocha/p/7977681.html">关于Unity性能优化的一些方法</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p><strong><span style="font-size: 18pt;">1.对于DrawCall的认识：</span></strong></p>
+<p>　　DrawCall即为由CPU下达命令，调用OpenGL或DirectX接口进行解析并由GPU进行渲染显示的过程称为一次DrawCall。</p>
+<p>　　在Unity中查看DrawCall参数，Window / Profiler 或者Ctrl+7 快捷键打开 Profiler性能分析器面板。</p>
+<p>　　在程序运行状态，如下图即为DrawCall参数：</p>
+<p>&nbsp;<img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/1292001-20171204143308263-292037298.png" alt=""></p>
+<p>　　当然，在保证游戏流畅度的基础上DrawCall越小越好！</p>
+<p><strong><span style="font-size: 18pt;">2.Statistics统计面板的认识：</span></strong></p>
+<p>　　在程序运行状态下，Game窗口点击Stats打开统计面板，参数如下：</p>
+<p><img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/1292001-20171204144121591-1769144433.png" alt=""></p>
+<p>　　FPS（帧数）：越大越好</p>
+<p>　　CPU（处理器计算速度）：越低越好</p>
+<p>　　render thread（渲染线程，GPU渲染所需要的时间）：越低越好</p>
+<p>　　Batches(渲染批次)：与DrawCall关联，是Unity自动分类的渲染批次</p>
+<p>　　Tris（三角面数）：相机视野范围内的三角面数量</p>
+<p>　　Verts（顶点数）：相机视野范围内的顶点数量</p>
+<p>　　SetPass calls：Unity中的Shader中包含很多Pass块，每当GPU即将去运行一个Pass块之前，就会产生一个“SetPass call”，在描述性能开销上更有说服力</p>
+<p><strong><span style="font-size: 18pt;">3.资源优化：</span></strong></p>
+<p>　　Mesh方面：</p>
+<p>　　　　动态模型：</p>
+<p>　　　　　　面片数&lt;3000, &nbsp;材质数&lt;3, &nbsp;骨骼数&lt;50</p>
+<p>　　　　静态模型：</p>
+<p>　　　　　　顶点数&lt;500</p>
+<p>　　Audio方面：</p>
+<p>　　　　长时间音乐（背景音乐）压缩格式：mp3</p>
+<p>　　　　短时间音乐（攻击等等）一般不压缩存储格式为：wav</p>
+<p>　　　　导入到Unity后的编辑面板显示为：</p>
+<p>　　　　<img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/1292001-20171204151512122-970355662.png" alt=""></p>
+<p>　　　　Decompress On Load：适用于小文件</p>
+<p>　　　　Compressed in Memory：使用于大文件</p>
+<p>　　　　Streaming：以流的形式便加载边播放（对CPU消耗较大一般不采用）</p>
+<p>　　Texture方面：</p>
+<p>　　　　贴图长度&lt;1024（对手机而言）</p>
+<p>　　Shader方面：</p>
+<p>　　　　尽量减少复杂的数学运算</p>
+<p>　　　　尽量减少Discard操作</p>
+<p>　　减少冗余资源和重复资源方面：</p>
+<p>　　　　A.Resources目录下的资源不管是否被引用，都会打包进安装包，不使用的资源不要放在Resources目录下</p>
+<p>　　　　B.不同目录下的相同资源文件，如果都被引用，那么都会打包进资源包，造成冗余，保证同一个资源文件在项目中只存放在一个目录位置</p>
+<p><strong><span style="font-size: 18pt;">4.LOD层级细节技术：</span></strong></p>
+<p>　　此技术需要美工的配合，提供给程序多个不同三角面数的模型</p>
+<p>　　在场景中新建一个空的游戏物体，并添加LOD Group组件，如下图所示：</p>
+<p>　　并将美工提供的三种不同精度的模型按照精度的大小依次拖入到LOD0、LOD1、LOD2中</p>
+<p>　　此时，场景中渲染显示的模型会根据相机与模型的距离进行切换显示，具体的切换显示距离可拖动组件中的条形框大小进行自定义，这样便达到了近处渲染精模，远处渲染粗模甚至不渲染来减少GPU消耗的目的</p>
+<p>　　<img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/1292001-20171204155012091-1085121931.png" alt="">　　<img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/1292001-20171204155600982-1790813590.png" alt=""></p>
+<p><strong><span style="font-size: 18pt;">5.OcclusionCulling遮挡剔除技术：</span></strong></p>
+<p>　　当场景中有大量模型需要渲染时，应用遮挡剔除可实现减少DrawCall提升性能的效果</p>
+<p>　　首先选中所有需要进行遮挡剔除的模型，并设置其occluder（遮挡体）和occludee（被遮挡体），有的物体可以是遮挡体同时也是被遮挡体。</p>
+<p>　　接下来Window / Occlusion Culling 打开遮挡剔除面板如下图：</p>
+<p>　　选中遮挡剔除选项，烘焙</p>
+<p>　　烘焙完成后，设置好显示视野的相机</p>
+<p>　　<img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/1292001-20171204161837169-905773770.png" alt="">　　<img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/1292001-20171204161849997-1024892994.png" alt=""></p>
+<p><strong><span style="font-size: 18pt;">6.Lightmapping光照贴图技术：</span></strong></p>
+<p>　　首先将需要进行光照贴图的游戏物体设置为Lightmap Static</p>
+<p>　　其次将用于光照贴图的所有光源设置为Baked模式</p>
+<p>　　最后Window / Lighting 打开灯光面板，进行烘焙，面板如下</p>
+<p>　　<img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/1292001-20171204182148425-740365809.png" alt="">　　<img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/1292001-20171204182204831-1138068802.png" alt=""></p>
+<p>&nbsp;　　其中Build后会在当前场景所在的文件夹中生成一个光照贴图文件，我们也可以点击Clear Baked Data 按钮进行光照贴图的清理操作</p>
+<p>　　之后无论场景中的光源是否激活，均显示光照效果，效果图如下：</p>
+<p>·　　<img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/1292001-20171204182809206-1142048738.png" alt=""></p>
+<p><strong><span style="font-size: 18pt;">7.Mesh合并：</span></strong></p>
+<p>　　当场景中模型非常多，不妨试一下模型合并技术，可以在3dMax或其他建模软件上进行操作，也可在Unity中进行操作，这里我仅介绍Unity中的模型合并方法。</p>
+<p>　　前提：合并的物体必须是相同的材质，否则合并之后赋值多个材质并不能起到优化作用</p>
+<p>　　首先，将下述代码放在Assets / Editor 文件夹下</p>
+<p>　　其次，在场景中需要合并的模型放在一个空物体下</p>
+<p>　　然后，点击选中空物体并点击上方的菜单栏按钮MeshCombine / CombineChildren进行合并所有子物体Mesh</p>
+<p>　　最后，自行更改模型中的材质，位置等参数即可</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008080;"> 1</span> <span style="color: #0000ff;">using</span><span style="color: #000000;"> UnityEngine;
+</span><span style="color: #008080;"> 2</span> <span style="color: #0000ff;">using</span><span style="color: #000000;"> System.Collections;
+</span><span style="color: #008080;"> 3</span> <span style="color: #0000ff;">using</span><span style="color: #000000;"> UnityEditor;
+</span><span style="color: #008080;"> 4</span> 
+<span style="color: #008080;"> 5</span> <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span><span style="color: #000000;"> CombineMesh : MonoBehaviour {
+</span><span style="color: #008080;"> 6</span> 
+<span style="color: #008080;"> 7</span>     <span style="color: #008000;">//</span><span style="color: #008000;">菜单按钮静态触发</span>
+<span style="color: #008080;"> 8</span>     [MenuItem( <span style="color: #800000;">"</span><span style="color: #800000;">MeshCombine/CombineChildren</span><span style="color: #800000;">"</span><span style="color: #000000;">)]  
+</span><span style="color: #008080;"> 9</span>      <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> CreatMeshCombine()
+</span><span style="color: #008080;">10</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">11</span>         <span style="color: #008000;">//</span><span style="color: #008000;">获取到当前点击的游戏物体</span>
+<span style="color: #008080;">12</span>         Transform tSelect =<span style="color: #000000;"> (Selection.activeGameObject).transform;
+</span><span style="color: #008080;">13</span> 
+<span style="color: #008080;">14</span>         <span style="color: #008000;">//</span><span style="color: #008000;">如果当前点击的游戏物体无子物体，则无操作</span>
+<span style="color: #008080;">15</span>         <span style="color: #0000ff;">if</span> (tSelect.childCount &lt; <span style="color: #800080;">1</span><span style="color: #000000;">)
+</span><span style="color: #008080;">16</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">17</span>             <span style="color: #0000ff;">return</span><span style="color: #000000;">;
+</span><span style="color: #008080;">18</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">19</span> 
+<span style="color: #008080;">20</span> 
+<span style="color: #008080;">21</span>         <span style="color: #008000;">//</span><span style="color: #008000;">确保当前点击的游戏物体身上有MeshFilter组件</span>
+<span style="color: #008080;">22</span>         <span style="color: #0000ff;">if</span> (!tSelect.GetComponent&lt;MeshFilter&gt;<span style="color: #000000;">())
+</span><span style="color: #008080;">23</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">24</span>             tSelect.gameObject.AddComponent&lt;MeshFilter&gt;<span style="color: #000000;">();
+</span><span style="color: #008080;">25</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">26</span>         <span style="color: #008000;">//</span><span style="color: #008000;">确保当前点击的游戏物体身上有MeshRenderer组件</span>
+<span style="color: #008080;">27</span>         <span style="color: #0000ff;">if</span> (!tSelect.GetComponent&lt;MeshRenderer&gt;<span style="color: #000000;">())
+</span><span style="color: #008080;">28</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">29</span>             tSelect.gameObject.AddComponent&lt;MeshRenderer&gt;<span style="color: #000000;">();
+</span><span style="color: #008080;">30</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">31</span>         <span style="color: #008000;">//</span><span style="color: #008000;">获取到所有子物体的MeshFilter组件</span>
+<span style="color: #008080;">32</span>         MeshFilter[] tFilters = tSelect.GetComponentsInChildren&lt;MeshFilter&gt;<span style="color: #000000;">();
+</span><span style="color: #008080;">33</span> 
+<span style="color: #008080;">34</span>         <span style="color: #008000;">//</span><span style="color: #008000;">根据所有MeshFilter组件的个数申请一个用于Mesh联合的类存储信息</span>
+<span style="color: #008080;">35</span>         CombineInstance[] tCombiners = <span style="color: #0000ff;">new</span><span style="color: #000000;"> CombineInstance[tFilters.Length];
+</span><span style="color: #008080;">36</span> 
+<span style="color: #008080;">37</span>         <span style="color: #008000;">//</span><span style="color: #008000;">遍历所有子物体的网格信息进行存储</span>
+<span style="color: #008080;">38</span>         <span style="color: #0000ff;">for</span> (<span style="color: #0000ff;">int</span> i = <span style="color: #800080;">0</span>; i &lt; tFilters .Length ; i++<span style="color: #000000;">)
+</span><span style="color: #008080;">39</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">40</span>             <span style="color: #008000;">//</span><span style="color: #008000;">记录网格</span>
+<span style="color: #008080;">41</span>             tCombiners[i].mesh =<span style="color: #000000;"> tFilters[i].sharedMesh;
+</span><span style="color: #008080;">42</span>             <span style="color: #008000;">//</span><span style="color: #008000;">记录位置</span>
+<span style="color: #008080;">43</span>             tCombiners[i].transform =<span style="color: #000000;"> tFilters[i].transform.localToWorldMatrix;
+</span><span style="color: #008080;">44</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">45</span>         <span style="color: #008000;">//</span><span style="color: #008000;">新申请一个网格用于显示组合后的游戏物体</span>
+<span style="color: #008080;">46</span>         Mesh tFinalMesh = <span style="color: #0000ff;">new</span><span style="color: #000000;"> Mesh();
+</span><span style="color: #008080;">47</span>         <span style="color: #008000;">//</span><span style="color: #008000;">重命名Mesh</span>
+<span style="color: #008080;">48</span>         tFinalMesh.name = <span style="color: #800000;">"</span><span style="color: #800000;">tCombineMesh</span><span style="color: #800000;">"</span><span style="color: #000000;">;
+</span><span style="color: #008080;">49</span>         <span style="color: #008000;">//</span><span style="color: #008000;">调用Unity内置方法组合新Mesh网格</span>
+<span style="color: #008080;">50</span> <span style="color: #000000;">        tFinalMesh.CombineMeshes(tCombiners);
+</span><span style="color: #008080;">51</span>         <span style="color: #008000;">//</span><span style="color: #008000;">赋值组合后的Mesh网格给选中的物体</span>
+<span style="color: #008080;">52</span>         tSelect.GetComponent&lt;MeshFilter&gt;().sharedMesh =<span style="color: #000000;"> tFinalMesh;
+</span><span style="color: #008080;">53</span>         <span style="color: #008000;">//</span><span style="color: #008000;">赋值新的材质</span>
+<span style="color: #008080;">54</span>         tSelect.GetComponent&lt;MeshRenderer&gt;().material = <span style="color: #0000ff;">new</span> Material(Shader.Find(<span style="color: #800000;">"</span><span style="color: #800000;">VertexLit</span><span style="color: #800000;">"</span><span style="color: #000000;">));
+</span><span style="color: #008080;">55</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">56</span> 
+<span style="color: #008080;">57</span> }</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;　　效果图如下：</p>
+<p>　　<img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/1292001-20171204193258878-948288418.png" alt=""></p>
+<p><strong><span style="font-size: 18pt;">&nbsp;8.资源池的利用：</span></strong></p>
+<p>　　当有游戏物体需要频繁的创建删除的时候，不妨试试资源池，可以节约性能。</p>
+<p>　　例子：射击游戏中的子弹</p>
+</div>
+<div id="MySignature" style="display: block;">但行好事，莫问前程！</div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="EntryTag">
+    标签: 
+            <a href="https://www.cnblogs.com/mrmocha/tag/Unity/">Unity</a>,             <a href="https://www.cnblogs.com/mrmocha/tag/DrawCall/">DrawCall</a>,             <a href="https://www.cnblogs.com/mrmocha/tag/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">性能优化</a>,             <a href="https://www.cnblogs.com/mrmocha/tag/LOD/">LOD</a>,             <a href="https://www.cnblogs.com/mrmocha/tag/%E9%81%AE%E6%8C%A1%E5%89%94%E9%99%A4/">遮挡剔除</a>,             <a href="https://www.cnblogs.com/mrmocha/tag/%E5%85%89%E7%85%A7%E8%B4%B4%E5%9B%BE/">光照贴图</a>,             <a href="https://www.cnblogs.com/mrmocha/tag/CPU%E4%BC%98%E5%8C%96/">CPU优化</a>,             <a href="https://www.cnblogs.com/mrmocha/tag/%E8%B5%84%E6%BA%90%E6%B1%A0/">资源池</a></div>
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(7977681,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow(&#39;9b610bbf-dab8-441f-e818-08d52f269005&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/mrmocha/" target="_blank"><img src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/20171203105914.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/mrmocha/">魔卡先生</a><br>
+            <a href="https://home.cnblogs.com/u/mrmocha/followees/">关注 - 0</a><br>
+            <a href="https://home.cnblogs.com/u/mrmocha/followers/">粉丝 - 13</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;9b610bbf-dab8-441f-e818-08d52f269005&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(7977681,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(7977681,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/mrmocha/p/7976174.html" class="p_n_p_prefix">« </a> 上一篇：    <a href="https://www.cnblogs.com/mrmocha/p/7976174.html" title="发布于 2017-12-04 11:08">关于UnityShader的入门学习 (二)</a>
+    <br>
+    <a href="https://www.cnblogs.com/mrmocha/p/7995196.html" class="p_n_p_prefix">» </a> 下一篇：    <a href="https://www.cnblogs.com/mrmocha/p/7995196.html" title="发布于 2017-12-06 22:19">关于Unity打包Android发布流程</a>
+
+</div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2017-12-04 16:26</span>&nbsp;<a href="https://www.cnblogs.com/mrmocha/">魔卡先生</a> 阅读(<span id="post_view_count">8943</span>) 评论(<span id="post_comment_count">0</span>) <a href="https://i.cnblogs.com/EditPosts.aspx?postid=7977681" rel="nofollow"> 编辑</a> <a href="javascript:void(0)" onclick="AddToWz(7977681); return false;">收藏</a>
+</div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/highlight.min.js.下载"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 399142, cb_blogApp = 'mrmocha', cb_blogUserGuid = '9b610bbf-dab8-441f-e818-08d52f269005';
+    var cb_entryId = 7977681, cb_entryCreatedDate = '2017-12-04 16:26', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/mrmocha/p/7977681.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/mrmocha/p/7977681.html#top">返回顶部</a></div>
+    <div id="comment_form_container"><div class="login_tips">
+    注册用户登录后才能发表评论，请 
+    <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a>
+     或 
+    <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，
+    <a href="https://www.cnblogs.com/">访问</a> 网站首页。
+</div></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-工控&#39;)">【推荐】超50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://www.jdcloud.com/cn/activity/year-end?utm_source=DMT_cnblogs&amp;utm_medium=CH&amp;utm_campaign=q4vm&amp;utm_term=Virtual-Machines" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-京东云&#39;)">【活动】京东云服务器_云主机低于1折，低价高性能产品备战双11</a><br><a href="https://www.ctyun.cn/activity/20191111?hmsr=%E7%9C%8B%E7%9C%8B-%E5%8D%9A%E5%AE%A2%E5%9B%AD-%E5%8F%8C11-1106&amp;hmpl=&amp;hmcu=&amp;hmkw=&amp;hmci=" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-天翼云&#39;)">【推荐】天翼云双十一翼降到底，云主机11.11元起，抽奖送大礼</a><br><a href="http://click.aliyun.com/m/1000081987/" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-阿里云&#39;)">【推荐】阿里云双11冰点钜惠，热门产品低至一折等你来抢！</a><br><a href="https://www.uibot.com.cn/sem/baidu16.html" target="_blank">【推荐】流程自动化专家UiBot，全套体系化教程成就高薪RPA工程师</a><br><a href="https://www.getui.com/2019devfest?f=5&amp;p=10&amp;c=15&amp;ch=1&amp;hmsr=%E5%8D%9A%E5%AE%A2%E5%9B%AD&amp;hmpl=2019%E5%BC%80%E5%8F%91%E8%80%85%E8%8A%82&amp;hmcu=PC&amp;hmkw=&amp;hmci=" target="_blank">【福利】个推四大热门移动开发SDK全部免费用一年，限时抢！</a><br></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/gpt.js.下载"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;" data-google-query-id="CPKrqMHx1-UCFZpiYAodDoAG4g"><div id="google_ads_iframe_/1090369/C1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C1_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C1_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="1" data-load-complete="true" src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/saved_resource.html"></iframe></div></div>
+    </div>
+    <div id="under_post_news"><div class="recomm-block"><b>相关博文：</b><br>·  <a title="Unity3D性能优化总结" href="https://www.cnblogs.com/quansir/p/6370796.html" target="_blank" onclick="clickRecomItmem(6370796)">Unity3D性能优化总结</a><br>·  <a title="Unity3d基本优化条目" href="https://www.cnblogs.com/Keyle/p/4593580.html" target="_blank" onclick="clickRecomItmem(4593580)">Unity3d基本优化条目</a><br>·  <a title="Unity 优化总结" href="https://www.cnblogs.com/zhenlong/p/5888584.html" target="_blank" onclick="clickRecomItmem(5888584)">Unity 优化总结</a><br>·  <a title="Unity性能优化" href="https://www.cnblogs.com/what-lee/p/9287179.html" target="_blank" onclick="clickRecomItmem(9287179)">Unity性能优化</a><br>·  <a title="【总结】Unity游戏优化" href="https://www.cnblogs.com/sols/p/8455466.html" target="_blank" onclick="clickRecomItmem(8455466)">【总结】Unity游戏优化</a><br>»  <a target="_blank" href="https://recomm.cnblogs.com/blogpost/7977681">更多推荐...</a></div></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;" data-google-query-id="CPOrqMHx1-UCFZpiYAodDoAG4g">
+            
+        <div id="google_ads_iframe_/1090369/C2_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C2_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C2_0" width="468" height="60" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="2" data-load-complete="true" src="./关于Unity性能优化的一些方法 - 魔卡先生 - 博客园_files/saved_resource(1).html"></iframe></div></div>
+    </div>
+    <div id="under_post_kb">
+<div class="itnews c_ad_block">
+    <b>最新 IT 新闻</b>:
+    <br>
+ ·              <a href="https://news.cnblogs.com/n/647244/" target="_blank">若无苹果47亿美元专利许可费 高通2019财年营收将同比下滑</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/647243/" target="_blank">中芯国际回应ASML断供光刻机：EUV还在纸面上，一切正常</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/647242/" target="_blank">NASA发现超热系外行星，表面温度赶超太阳</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/647241/" target="_blank">vivo首次尝试联合三星研发手机处理器芯片</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/647240/" target="_blank">ASML：向中芯国际“延迟出货”说法有误 许可证正在等待荷兰政府核准</a>
+            <br>
+    » <a href="https://news.cnblogs.com/" title="IT 新闻" target="_blank">更多新闻...</a>
+</div></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem"><!--done-->
+<h3 class="catListTitle">公告</h3>
+
+<div id="blog-news">
+    
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/mrmocha/">
+            魔卡先生
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/mrmocha/" title="入园时间：2017-12-02">
+            1年11个月
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/mrmocha/followers/">
+            13
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/mrmocha/followees/">
+            0
+        </a>
+        <div id="p_b_follow">
+<a href="javascript:void(0)" onclick="follow(&#39;9b610bbf-dab8-441f-e818-08d52f269005&#39;)">+加关注</a></div>
+        <script>getFollowStatus('9b610bbf-dab8-441f-e818-08d52f269005');</script>
+    </div>
+</div>
+
+</div>
+
+			<div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2019/10/07&#39;); return false;">&lt;</a>
+                            </td>
+                            <td align="center">2019年11月</td>
+                            <td align="right" class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2019/12/07&#39;); return false;">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+                    <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
+                    <th class="CalDayHeader" align="center" abbr="一" scope="col">一</th>
+                    <th class="CalDayHeader" align="center" abbr="二" scope="col">二</th>
+                    <th class="CalDayHeader" align="center" abbr="三" scope="col">三</th>
+                    <th class="CalDayHeader" align="center" abbr="四" scope="col">四</th>
+                    <th class="CalDayHeader" align="center" abbr="五" scope="col">五</th>
+                    <th class="CalDayHeader" align="center" abbr="六" scope="col">六</th>
+        </tr>
+            <tr>
+                            <td class="CalOtherMonthDay" align="center">27</td>
+                            <td class="CalOtherMonthDay" align="center">28</td>
+                            <td class="CalOtherMonthDay" align="center">29</td>
+                            <td class="CalOtherMonthDay" align="center">30</td>
+                            <td class="CalOtherMonthDay" align="center">31</td>
+                        <td class="" align="center">
+                            1
+                        </td>
+                    <td class="CalWeekendDay" align="center">
+                        2
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            3
+                        </td>
+                            <td class="" align="center">
+                                4
+                            </td>
+                            <td class="" align="center">
+                                5
+                            </td>
+                            <td class="" align="center">
+                                6
+                            </td>
+                            <td class="CalTodayDay" align="center">
+                                7
+                            </td>
+                            <td class="" align="center">
+                                8
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            9
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            10
+                        </td>
+                            <td class="" align="center">
+                                11
+                            </td>
+                            <td class="" align="center">
+                                12
+                            </td>
+                            <td class="" align="center">
+                                13
+                            </td>
+                            <td class="" align="center">
+                                14
+                            </td>
+                            <td class="" align="center">
+                                15
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            16
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            17
+                        </td>
+                            <td class="" align="center">
+                                18
+                            </td>
+                            <td class="" align="center">
+                                19
+                            </td>
+                            <td class="" align="center">
+                                20
+                            </td>
+                            <td class="" align="center">
+                                21
+                            </td>
+                            <td class="" align="center">
+                                22
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            23
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            24
+                        </td>
+                            <td class="" align="center">
+                                25
+                            </td>
+                            <td class="" align="center">
+                                26
+                            </td>
+                            <td class="" align="center">
+                                27
+                            </td>
+                            <td class="" align="center">
+                                28
+                            </td>
+                            <td class="" align="center">
+                                29
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            30
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalOtherMonthDay" align="center">
+                            1
+                        </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                2
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                3
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                4
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                5
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                6
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            7
+                        </td>
+                </tr>
+    </tbody>
+</table></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn">
+<!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div id="sidebar_search" class="mySearch">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            <div id="widget_my_google" class="div_my_zzk">
+                <input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block">
+    <div class="catListLink">
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+		<li>
+
+<a href="https://www.cnblogs.com/mrmocha/p/" title="我的博客的随笔列表">我的随笔</a>
+</li>
+		<li>
+
+<a href="https://www.cnblogs.com/mrmocha/MyComments.html" title="我的发表过的评论列表">我的评论</a>
+</li>
+		<li>
+
+<a href="https://www.cnblogs.com/mrmocha/OtherPosts.html" title="我评论过的随笔列表">我的参与</a>
+</li>
+		<li>
+
+<a href="https://www.cnblogs.com/mrmocha/RecentComments.html" title="我的博客的评论列表">最新评论</a>
+</li>
+		<li>
+
+<a href="https://www.cnblogs.com/mrmocha/tag/" title="我的博客的标签列表">我的标签</a>
+</li>
+
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div>
+
+
+</div>
+
+<!-- 最新随笔 -->
+
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block">
+    <div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+
+        <li>
+            <a href="https://www.cnblogs.com/mrmocha/tag/Unity/">Unity</a>(32)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/mrmocha/tag/AR/">AR</a>(5)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/mrmocha/tag/Vuforia/">Vuforia</a>(5)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/mrmocha/tag/UGUI/">UGUI</a>(4)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/mrmocha/tag/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE/">视频播放</a>(4)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/mrmocha/tag/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5/">数据库连接</a>(3)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/mrmocha/tag/Shader/">Shader</a>(3)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/mrmocha/tag/AVPro%20Video%E6%8F%92%E4%BB%B6/">AVPro Video插件</a>(3)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/mrmocha/tag/Image/">Image</a>(2)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/mrmocha/tag/Mesh/">Mesh</a>(2)
+        </li>
+            <li>
+                <a href="https://www.cnblogs.com/mrmocha/tag/">更多</a>
+            </li>
+
+</ul>
+</div>
+
+
+</div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+    
+        <div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+            <h3 class="catListTitle">
+                
+
+随笔档案
+
+
+
+            </h3>
+
+
+            <ul>
+
+                        <li>
+                            
+<a href="https://www.cnblogs.com/mrmocha/archive/2018/12.html" rel="" target="">
+    2018年12月(5)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/mrmocha/archive/2018/10.html" rel="" target="">
+    2018年10月(6)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/mrmocha/archive/2018/08.html" rel="" target="">
+    2018年8月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/mrmocha/archive/2018/03.html" rel="" target="">
+    2018年3月(1)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/mrmocha/archive/2018/01.html" rel="" target="">
+    2018年1月(4)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/mrmocha/archive/2017/12.html" rel="" target="">
+    2017年12月(19)
+</a>
+ 
+
+                        </li>
+
+            </ul>
+
+
+        </div>
+
+</div>
+
+<!-- 最新评论 -->
+<div id="sidebar_recentcomments" class="sidebar-block">
+    <div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div class="RecentCommentBlock">
+        <ul>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/mrmocha/p/7967015.html#4302778">1. Re:关于UnityShader的入门学习 (一)</a></li>
+                    <li class="recent_comment_body">硬核文章</li>
+                    <li class="recent_comment_author">--深秋大街道</li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+
+
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block">
+    <div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/mrmocha/p/9737448.html">
+                            1. 关于Unity实现AR功能（一）Vuforia介绍(11102)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mrmocha/p/7977681.html">
+                            2. 关于Unity性能优化的一些方法(8943)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mrmocha/p/8087389.html">
+                            3. 关于Unity视频播放器插件 AVPro Video（一）平面UI视频播放(4537)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mrmocha/p/8076154.html">
+                            4. 关于Unity调用摄像头扫描二维码与生成二维码的实现方法(3916)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mrmocha/p/8320994.html">
+                            5. 关于Unity实现模型外发光效果HighlightingSystem插件解析(3861)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block">
+    <div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/mrmocha/p/7967015.html">
+                            1. 关于UnityShader的入门学习 (一)(1)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block">
+    
+</div></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright © 2019 魔卡先生
+<br><span id="poweredby">Powered by .NET Core 3.0.0 on Linux</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+
+</body></html>

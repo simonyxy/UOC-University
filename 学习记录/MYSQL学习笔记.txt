@@ -1,0 +1,200 @@
+1，什么是数据库？
+	Excel就是一个数据表，人操作
+	MySQL是一个数据库，便于程序操作，便于存储百万以上级别的数据
+	
+	对于数据库的基本操作：增删改查
+	如何对数据库操作 SQL语句 SQL命令 Structured Query Language(SQL)
+		1，每个命令后;
+		2，不区分大小写
+	
+	学习数据库注意事项：学会老师讲解的80%，遇到剩余20%不懂的，学会多搜索
+2，数据库排行(2016.10)
+	Oracle
+	MySQL
+	SQL Server
+	MongoDB
+	PostgreSQL
+	DB2
+3，关系数据库，
+是建立在关系模型基础上的数据库，借助于集合代数等数学概念和方法来处理数据库中的数据。
+现实世界中的各种实体以及实体之间的各种联系均用关系模型来表示。
+
+Oracle、SQL Server、MySQL
+
+4，服务器端运行原理图
+（理解什么是ip和端口号）
+	Web Application Server
+	Game Server
+	
+5，如何在MySQL中存储数据
+	MySQL下可以创建多个库（数据库）database
+		每个库下可以创建多个表（表格）table
+			通过表格存储我们的数据
+
+6，什么是表（Table）（表，行，列，格子）
+	表有表头（表头表示这个表有哪些列）
+	表里面的每一行都是我们存储的数据
+
+7，假如我们要学生信息和班级信息，如何设计表呢
+
+
+
+8，MySQL安装
+	默认超级管理员
+		root root
+9，
+	MySQL Workbench介绍
+	MySQL Command Line Editor
+	
+数据库的链接
+	localhost  127.0.0.1  都代表本机
+	
+10，什么是表（Table）（表，行，列，格子）
+	表有表头（表头表示这个表有哪些列）
+	表里面的每一行都是我们存储的数据
+	主键(Primary Ke y)
+		1,每行数据独一无二的标识
+		2,一个表必须有主键(只能有一个主键)
+		3,不能为NULL(空值)
+		4,由一列或者多列组成
+	Unique Key
+		1，表示该项数据不能重复
+		2，允许一条可以为NULL
+	外键(Foreign Key)
+		1，这列数据引用了另外一个表的主键 
+
+	表的关系
+		一对一 OneToOne
+		一对多 OneToMany
+		多对多 ManyToMany
+	
+数据库的创建
+表的创建
+列的设置
+
+数据添加
+
+数据删除
+
+数据修改
+
+数据查询
+
+10，数据类型
+	字符串 - char varchar(length) - string
+	整数 - int - int
+	小数 - float - float
+	日期时间 - date - DateTime
+	
+	默认值
+	可以为NULL
+	自动增长
+11，MySQL控制台
+	help;
+	quit;
+	show databases;
+	use databasexxx;
+	show tables;
+	select * from tablename;
+12，MySQL Workbench全面功能学习
+	http://dev.mysql.com/doc/workbench/en/
+	
+	添加表
+	添加数据
+	数据的查询
+	数据的更改
+	数据的提交
+	添加数据
+	修改表结构查看表结构 alter table
+13,select column_list 
+	from table_name 
+	where filter_condition 
+	order by column_list (desc)
+	limit rom_limit;
+	
+
+SQL添加注释
+	--单行注释
+	/* */多行注释
+14, 查询静态值
+	select 'some string';
+	select 1+1;
+	select now();
+	select curdate();
+	select curtime();
+	select pi();
+	select mod(45,7);
+	select sqrt(25);
+	可以在查询的时候通过as 修改这一列的列名
+	
+15,select * from where 1=2;
+
+16,查询的时候可以对查询的列做一些运算
+	*
+	/ (除 结果为浮点)
+	div (除 结果为整数)
+	%  mod （求余，结果为浮点数）
+	+ 
+	-
+17,查询的时候可以使用的功能函数
+	round() 四舍五入
+	round(columnname,x)四舍五入保留x位小数
+	floor()直接舍
+	ceiling()直接入
+18,字符串操作
+	concat 
+	left 
+	length 
+	reverse
+	replace
+	date_format %m %b %d %y %Y %T %f 
+		http://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html#function_date-format
+	get_format(datetime,'EUR' 'ISO' 'USA')
+	dayofweek
+	quarter
+	week
+	monthname
+19,distinct
+
+20,where条件
+		1,数字 > < = >= <= <>
+		2,字符串 = '' > < = >= <= <> !=
+		
+		逻辑操作
+		is 仅用is null或is not null
+		and or not
+		and 优先级> or 
+		
+		范围判断
+		in (not in)
+		between (not between)     示例：select * from category where category_id between 1 and 9;
+		like (not like) % _
+		    示例1：select * from category where name like 'A%';
+		关于NULL的条件
+		is NULL
+		is not NULL
+
+21,limit x
+	limit x1,x2;
+	
+22,创建表
+	create table tablename(
+		col_name type not null auto_increment,
+		col_name type default,
+		primary key(col_name)
+	);
+	desc tablename;查看表结构
+	插入表
+	insert into tablename(col_name,col_name,col_name)
+	values(value1,value2,value3,value4,value5);
+	
+	更新数据
+	update tablename
+	set col_name = value,
+		col_name = value
+	where condition;
+	
+	删除数据
+	delete from tablename where condition;
+	
+	
