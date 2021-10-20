@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FAE7043D-45D3-E236-DE82-EBB0E85B54B6}</ProjectGuid>
+    <ProjectGuid>{9D48836D-0636-40B6-1D0B-1E8D0AD3453F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.RenderPipelines.Universal.Runtime</AssemblyName>
@@ -62,8 +62,8 @@
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Overrides\Tonemapping.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\2D\Passes\Utility\Light2DLookupTexture.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\2D\Light2D.cs" />
-    <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\RendererFeatures\ScreenSpaceAmbientOcclusion.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Passes\DeferredPass.cs" />
+    <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\RendererFeatures\ScreenSpaceAmbientOcclusion.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Overrides\DepthOfField.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\DeferredTiler.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\UniversalRenderPipelineCore.cs" />
@@ -73,9 +73,9 @@
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\2D\Shadows\CompositeShadowCaster2D.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Overrides\WhiteBalance.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\DeferredLights.cs" />
-    <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\2D\Passes\IRenderPass2D.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\RendererFeatures\RenderObjects.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Passes\XROcclusionMeshPass.cs" />
+    <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\2D\Passes\IRenderPass2D.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\Overrides\ColorCurves.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\2D\Light2DPoint.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@10.3.2\Runtime\External\LibTessDotNet\PriorityQueue.cs" />
@@ -717,19 +717,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{91AC1DF4-625F-902C-DA75-CF3EE57D54FE}</Project>
+      <Project>{A0238128-1645-B307-5B72-735CC3B8D076}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
-      <Project>{3378BC94-9CAC-5B78-9E32-18106455F2E1}</Project>
+      <Project>{DD7079BA-1D2B-E340-3050-DE7AC006ED65}</Project>
       <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{552297D4-CA74-2D96-7A9C-1D9745D351AA}</Project>
+      <Project>{B95E6578-443E-0E1A-7D2E-FEEF1BC357E4}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{5882F765-8E86-2186-C3C4-AE1F39F37969}</Project>
+      <Project>{A3D95F7F-877B-4182-84A8-5015646BADC0}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{9FBAE3B9-37B8-6D46-D421-EA0D225137B8}</ProjectGuid>
+    <ProjectGuid>{E23CA052-4FEE-BDFC-8EF9-4DBCACBCBA8D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,107 +56,107 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-    <Compile Include="Assets\Scripts\UI\GameBeginCanvas.cs" />
-    <Compile Include="Assets\Scripts\Doc\UICheckTool.cs" />
     <Compile Include="Assets\Scripts\Config\GConfig.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\bl_MiniMap.cs" />
     <Compile Include="Assets\UGUIMiniMap\Example\Scripts\bl_MMExampleManager.cs" />
-    <Compile Include="Assets\Scripts\TimeLine\DiaLogTimeLine\MutiDialogClick.cs" />
-    <Compile Include="Assets\Scripts\NPC\NpcStory.cs" />
-    <Compile Include="Assets\Scripts\camera\FrameCtl.cs" />
-    <Compile Include="Assets\Scripts\Doc\Doc\边缘检测\BrightnessSetting.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Util\bl_MiniMapUtils.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\bl_IconItem.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Enum\MMItemEffect.cs" />
-    <Compile Include="Assets\Scripts\System\Frustratio.cs" />
     <Compile Include="Assets\Scripts\player\StateMachine.cs" />
     <Compile Include="Assets\UGUIMiniMap\Example\Standard Assets\Characters\FirstPersonCharacter\Scripts\bl_FirstPersonController.cs" />
-    <Compile Include="Assets\Scripts\player\StplayerUIOpen.cs" />
-    <Compile Include="Assets\Scripts\NPC\NpcCtl.cs" />
-    <Compile Include="Assets\Scripts\Tool\Timer\MonoSingleton.cs" />
     <Compile Include="Assets\Scripts\System\SystemTime.cs" />
     <Compile Include="Assets\Scripts\System\SEventSystem.cs" />
-    <Compile Include="Assets\taget.cs" />
-    <Compile Include="Assets\Scripts\NPC\NpcNormal.cs" />
-    <Compile Include="Assets\Scripts\UI\NPCInfoButtonGroup.cs" />
-    <Compile Include="Assets\Scripts\Doc\Doc\高斯模糊(项目)\GaussianBlur.cs" />
-    <Compile Include="Assets\Scripts\UI\NpcSayHiButtonGroup.cs" />
-    <Compile Include="Assets\Scripts\Doc\Doc\边缘检测\postEffectBase.cs" />
-    <Compile Include="Assets\Scripts\Tool\Timer\TimerUseExample.cs" />
     <Compile Include="Assets\Scripts\NPC\demoNpc\ConfigDemoNpc.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Atributte\LayerMaskAttribute.cs" />
-    <Compile Include="Assets\Scripts\player\StplayerStory.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\bl_MiniMapItem.cs" />
-    <Compile Include="Assets\Scripts\UI\GameTimerView.cs" />
-    <Compile Include="Assets\Scripts\Config\ConfigEx\GConfigEx.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Atributte\InspectorButtonAttribute.cs" />
-    <Compile Include="Assets\Scripts\Config\NpcconfigBase.cs" />
-    <Compile Include="Assets\Scripts\System\StoryMgr.cs" />
-    <Compile Include="Assets\Scripts\TimeLine\DiaLogTimeLine\MutiDialogTrack.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\Misc\bl_MaskHelper.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Example\Standard Assets\Utility\bl_CurveControlledBob.cs" />
     <Compile Include="Assets\UGUIMiniMap\Example\Standard Assets\Utility\bl_LerpControlledBob.cs" />
-    <Compile Include="Assets\Scripts\System\FrustratioMgr.cs" />
-    <Compile Include="Assets\Scripts\TimeLine\AStar\AStarClick.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Example\Standard Assets\Characters\FirstPersonCharacter\Scripts\bl_MouseLook.cs" />
-    <Compile Include="Assets\Scripts\Tool\Timer\DontDestroyHelper.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\Misc\bl_MapPointer.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Atributte\SeparatorAttribute.cs" />
     <Compile Include="Assets\Scripts\System\NpcMgr.cs" />
-    <Compile Include="Assets\Scripts\Doc\UIPolygon.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Struct\bl_MMItemInfo.cs" />
     <Compile Include="Assets\Scripts\NPC\YangHuiMin\YangHuiMinConfig.cs" />
-    <Compile Include="Assets\Scripts\Doc\1-26fuckthekey.cs" />
     <Compile Include="Assets\Scripts\TimeLine\DiaLogTimeLine\MutiDialogBehaviour.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Util\bl_SnapShot.cs" />
-    <Compile Include="Assets\Scripts\UI\NpcDetailPanelEx.cs" />
-    <Compile Include="Assets\Scripts\player\PlayerConfig.cs" />
     <Compile Include="Assets\Scripts\Config\PConfig.cs" />
-    <Compile Include="Assets\Scripts\Tool\InvokeManager.cs" />
-    <Compile Include="Assets\Scripts\Doc\SearchUslessComponent.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Example\Scripts\bl_RandomBot.cs" />
-    <Compile Include="Assets\Scripts\System\FT.cs" />
     <Compile Include="Assets\Scripts\TimeLine\DiaLogTimeLine\DialogTrack.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\bl_MMCompass.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\bl_WorldSpace.cs" />
     <Compile Include="Assets\Scripts\NPC\YangHuiMin\YangHuiMinCtl.cs" />
     <Compile Include="Assets\UGUIMiniMap\Example\Scripts\bl_CreateItemExample.cs" />
     <Compile Include="Assets\Scripts\NPC\IStoryConfig.cs" />
-    <Compile Include="Assets\Scripts\player\playerUICtl.cs" />
     <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Atributte\CustomToggleAttribute.cs" />
-    <Compile Include="Assets\Scripts\camera\FrameSwitch.cs" />
-    <Compile Include="Assets\Scripts\Tool\AnimGameBeginEnd.cs" />
-    <Compile Include="Assets\Scripts\Tool\Face.cs" />
-    <Compile Include="Assets\Scripts\TimeLine\AStar\AstartTrack.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\bl_MiniMapTexture.cs" />
-    <Compile Include="Assets\Scripts\UI\BaseWindow.cs" />
-    <Compile Include="Assets\Scripts\player\StPlayerNormal.cs" />
-    <Compile Include="Assets\Scripts\Tool\MeshOrderSetting.cs" />
-    <Compile Include="Assets\Scripts\GameBeginMgr.cs" />
-    <Compile Include="Assets\Scripts\Tool\Timer\TimerManager.cs" />
-    <Compile Include="Assets\Scripts\Doc\Doc\高斯模糊(项目)\GaussianBlurImageCamera.cs" />
     <Compile Include="Assets\Scripts\UI\GameInitViewEx.cs" />
-    <Compile Include="Assets\Scripts\UI\DialogView.cs" />
-    <Compile Include="Assets\Scripts\Tool\Timer\Timer.cs" />
-    <Compile Include="Assets\Scripts\Tool\STimer.cs" />
     <Compile Include="Assets\Scripts\NPC\NearTrigger.cs" />
-    <Compile Include="Assets\Scripts\Doc\Doc\高斯模糊(项目)\GaussianBlurImage.cs" />
-    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\Misc\bl_MiniMapDragArea.cs" />
-    <Compile Include="Assets\Scripts\UI\MutiDiaLogView.cs" />
     <Compile Include="Assets\Scripts\Doc\Doc\边缘检测\边缘检测高级\edgeHard.cs" />
+    <Compile Include="Assets\Scripts\Doc\UICheckTool.cs" />
+    <Compile Include="Assets\Scripts\Doc\Doc\边缘检测\BrightnessSetting.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\bl_IconItem.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Enum\MMItemEffect.cs" />
+    <Compile Include="Assets\Scripts\System\Frustratio.cs" />
+    <Compile Include="Assets\Scripts\Tool\Timer\MonoSingleton.cs" />
+    <Compile Include="Assets\taget.cs" />
+    <Compile Include="Assets\Scripts\UI\NpcSayHiButtonGroup.cs" />
+    <Compile Include="Assets\Scripts\Tool\Timer\TimerUseExample.cs" />
+    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Atributte\LayerMaskAttribute.cs" />
+    <Compile Include="Assets\Scripts\Config\ConfigEx\GConfigEx.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Atributte\InspectorButtonAttribute.cs" />
+    <Compile Include="Assets\Scripts\TimeLine\AStar\AStarClick.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Internal\Struct\bl_MMItemInfo.cs" />
+    <Compile Include="Assets\Scripts\Doc\1-26fuckthekey.cs" />
+    <Compile Include="Assets\Scripts\UI\NpcDetailPanelEx.cs" />
+    <Compile Include="Assets\Scripts\Doc\SearchUslessComponent.cs" />
+    <Compile Include="Assets\Scripts\System\FT.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\bl_MMCompass.cs" />
+    <Compile Include="Assets\Scripts\Tool\Face.cs" />
+    <Compile Include="Assets\Scripts\Tool\MeshOrderSetting.cs" />
+    <Compile Include="Assets\Scripts\Tool\Timer\TimerManager.cs" />
+    <Compile Include="Assets\Scripts\Tool\Timer\Timer.cs" />
     <Compile Include="Assets\Scripts\player\playerCtl.cs" />
-    <Compile Include="Assets\Scripts\Tool\Singleton.cs" />
-    <Compile Include="Assets\Scripts\UI\UIMgr.cs" />
     <Compile Include="Assets\Scripts\TimeLine\DiaLogTimeLine\DialogClick.cs" />
+    <Compile Include="Assets\Scripts\TimeLine\DiaLogTimeLine\MutiDialogClick.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Util\bl_MiniMapUtils.cs" />
+    <Compile Include="Assets\Scripts\Doc\Doc\高斯模糊(项目)\GaussianBlur.cs" />
+    <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\player\StplayerStory.cs" />
+    <Compile Include="Assets\Scripts\System\StoryMgr.cs" />
+    <Compile Include="Assets\Scripts\TimeLine\DiaLogTimeLine\MutiDialogTrack.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Example\Standard Assets\Utility\bl_CurveControlledBob.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Example\Standard Assets\Characters\FirstPersonCharacter\Scripts\bl_MouseLook.cs" />
+    <Compile Include="Assets\Scripts\Tool\Timer\DontDestroyHelper.cs" />
+    <Compile Include="Assets\Scripts\Doc\UIPolygon.cs" />
+    <Compile Include="Assets\Scripts\Tool\InvokeManager.cs" />
+    <Compile Include="Assets\Scripts\player\PlayerConfig.cs" />
+    <Compile Include="Assets\Scripts\player\playerUICtl.cs" />
+    <Compile Include="Assets\Scripts\Tool\AnimGameBeginEnd.cs" />
+    <Compile Include="Assets\Scripts\camera\FrameSwitch.cs" />
+    <Compile Include="Assets\Scripts\UI\BaseWindow.cs" />
+    <Compile Include="Assets\Scripts\UI\DialogView.cs" />
+    <Compile Include="Assets\Scripts\Doc\Doc\高斯模糊(项目)\GaussianBlurImage.cs" />
+    <Compile Include="Assets\Scripts\Tool\Singleton.cs" />
     <Compile Include="Assets\Scripts\Doc\Doc\高斯模糊(项目)\PostEffectsBase2.cs" />
     <Compile Include="Assets\Scripts\TimeLine\AStar\AStarBehaviour.cs" />
     <Compile Include="Assets\Scripts\System\TriggerStory.cs" />
-    <Compile Include="Assets\Scripts\Doc\Doc\视觉效果\FieldOfView.cs" />
     <Compile Include="Assets\UGUIMiniMap\Example\Standard Assets\Utility\bl_FOVKick.cs" />
-    <Compile Include="Assets\Scripts\UI\RoleFrustratioPanel.cs" />
+    <Compile Include="Assets\Scripts\Doc\Doc\视觉效果\FieldOfView.cs" />
     <Compile Include="Assets\Scripts\TimeLine\DiaLogTimeLine\DialogBehaviour.cs" />
+    <Compile Include="Assets\Scripts\UI\GameBeginCanvas.cs" />
+    <Compile Include="Assets\Scripts\NPC\NpcStory.cs" />
+    <Compile Include="Assets\Scripts\camera\FrameCtl.cs" />
+    <Compile Include="Assets\Scripts\player\StplayerUIOpen.cs" />
+    <Compile Include="Assets\Scripts\NPC\NpcNormal.cs" />
+    <Compile Include="Assets\Scripts\UI\NPCInfoButtonGroup.cs" />
+    <Compile Include="Assets\Scripts\NPC\NpcCtl.cs" />
+    <Compile Include="Assets\Scripts\Doc\Doc\边缘检测\postEffectBase.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\bl_MiniMapItem.cs" />
+    <Compile Include="Assets\Scripts\UI\GameTimerView.cs" />
+    <Compile Include="Assets\Scripts\Config\NpcconfigBase.cs" />
+    <Compile Include="Assets\Scripts\System\FrustratioMgr.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\Misc\bl_MapPointer.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Util\bl_SnapShot.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Example\Scripts\bl_RandomBot.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\bl_WorldSpace.cs" />
+    <Compile Include="Assets\Scripts\TimeLine\AStar\AstartTrack.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\bl_MiniMapTexture.cs" />
+    <Compile Include="Assets\Scripts\player\StPlayerNormal.cs" />
+    <Compile Include="Assets\Scripts\GameBeginMgr.cs" />
+    <Compile Include="Assets\Scripts\Doc\Doc\高斯模糊(项目)\GaussianBlurImageCamera.cs" />
+    <Compile Include="Assets\Scripts\Tool\STimer.cs" />
+    <Compile Include="Assets\UGUIMiniMap\Content\Scripts\Core\Misc\bl_MiniMapDragArea.cs" />
+    <Compile Include="Assets\Scripts\UI\MutiDiaLogView.cs" />
+    <Compile Include="Assets\Scripts\UI\UIMgr.cs" />
+    <Compile Include="Assets\Scripts\UI\RoleFrustratioPanel.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
@@ -386,14 +386,8 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>D:\unity202.3.0f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.XRModule.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -401,11 +395,8 @@
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+    <Reference Include="PackageToolsEditor">
+      <HintPath>Library\ScriptAssemblies\PackageToolsEditor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Searcher.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
@@ -416,17 +407,26 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="PackageToolsEditor">
-      <HintPath>Library\ScriptAssemblies\PackageToolsEditor.dll</HintPath>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="AstarPathfindingProjectEditor">
       <HintPath>Library\ScriptAssemblies\AstarPathfindingProjectEditor.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
       <HintPath>Assets\Plugins\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
@@ -779,52 +779,52 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
-      <Project>{786391BF-DD93-135D-BCF3-9135FDBC99A6}</Project>
+      <Project>{599C30A5-8D06-2C97-C758-10158444AB6F}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{716538B3-C323-D295-95E0-EFC7537E8F9B}</Project>
+      <Project>{435A3642-EF5B-4653-24EC-298130568ED5}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
-      <Project>{3378BC94-9CAC-5B78-9E32-18106455F2E1}</Project>
-      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{A0A72248-0E7E-8B99-E2C9-C6FA22989162}</Project>
+      <Project>{2C6C08A7-5B95-EA16-CB3C-1A700EDC9AEA}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
-      <Project>{929799D8-BF65-A31C-FBF6-2E10ED9057C1}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{5D9A3E13-D84F-3232-CDAD-83880DA63B17}</Project>
+      <Project>{294E8FE1-98E2-BB00-6E97-2B3D5A1C62F6}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{91AC1DF4-625F-902C-DA75-CF3EE57D54FE}</Project>
+      <Project>{A0238128-1645-B307-5B72-735CC3B8D076}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
-      <Project>{1F2B1538-DEB6-F31F-EDBB-9FC18DD9F7CF}</Project>
+      <Project>{7527687F-AB49-47A7-BD85-4A21DF08BC1B}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{5882F765-8E86-2186-C3C4-AE1F39F37969}</Project>
+      <Project>{A3D95F7F-877B-4182-84A8-5015646BADC0}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{552297D4-CA74-2D96-7A9C-1D9745D351AA}</Project>
+      <Project>{B95E6578-443E-0E1A-7D2E-FEEF1BC357E4}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{6B52C444-210C-6F2D-D6D1-11FBEF9F92DE}</Project>
+      <Name>Cinemachine</Name>
+    </ProjectReference>
     <ProjectReference Include="AstarPathfindingProject.csproj">
-      <Project>{ACC98B3D-48CC-B3A2-A501-107CE54E7FA5}</Project>
+      <Project>{7302A827-7451-A41E-5AAC-15FCCCFF65EB}</Project>
       <Name>AstarPathfindingProject</Name>
     </ProjectReference>
-    <ProjectReference Include="Cinemachine.csproj">
-      <Project>{6DEF5850-60DD-A43F-FD85-192A956A952F}</Project>
-      <Name>Cinemachine</Name>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
+      <Project>{DD7079BA-1D2B-E340-3050-DE7AC006ED65}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{29BBA5D2-D3BB-D847-9DCD-54D4847CA603}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

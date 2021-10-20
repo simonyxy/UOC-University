@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{552297D4-CA74-2D96-7A9C-1D9745D351AA}</ProjectGuid>
+    <ProjectGuid>{B95E6578-443E-0E1A-7D2E-FEEF1BC357E4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Mathematics</AssemblyName>
@@ -64,8 +64,8 @@
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\bool2.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\float4x4.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\int3.gen.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\Noise\common.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\uint4x4.gen.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\Noise\common.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\int4x2.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\half2.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\bool3x2.gen.cs" />
@@ -381,11 +381,11 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
-    </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
       <HintPath>Assets\Plugins\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:\unity202.3.0f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -741,11 +741,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{6C1B794D-1D53-6C6C-EE1C-A0D423459961}</Project>
+      <Project>{AE3AB09D-D87A-2BF2-2DC6-D520CBECB2C9}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{5882F765-8E86-2186-C3C4-AE1F39F37969}</Project>
+      <Project>{A3D95F7F-877B-4182-84A8-5015646BADC0}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

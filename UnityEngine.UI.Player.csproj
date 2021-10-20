@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{80CB2492-9735-CE3D-3507-4CA4B27F6A0A}</ProjectGuid>
+    <ProjectGuid>{AB67DAEE-F7A6-2A63-85B1-16ED965ED695}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UnityEngine.UI</AssemblyName>
@@ -58,8 +58,8 @@
   <ItemGroup>
     <Compile Include="D:\unity202.3.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Toggle.cs" />
     <Compile Include="D:\unity202.3.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Text.cs" />
-    <Compile Include="D:\unity202.3.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\GraphicRaycaster.cs" />
     <Compile Include="D:\unity202.3.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Image.cs" />
+    <Compile Include="D:\unity202.3.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\GraphicRaycaster.cs" />
     <Compile Include="D:\unity202.3.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Layout\LayoutElement.cs" />
     <Compile Include="D:\unity202.3.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\IGraphicEnabledDisabled.cs" />
     <Compile Include="D:\unity202.3.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Selectable.cs" />

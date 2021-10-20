@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D1708A45-BAA1-3A0B-0EF5-976E45F14997}</ProjectGuid>
+    <ProjectGuid>{1E265C29-51FC-2F5A-C461-FED012663A8E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Timeline</AssemblyName>
@@ -94,8 +94,8 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Playables\BasicScriptPlayable.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Animation\AnimationTrack.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Extensions\TrackExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Audio\AudioPlayableAsset.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Evaluation\IntervalTree.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Audio\AudioPlayableAsset.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Playables\NotificationFlags.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Activation\ActivationTrack.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.6\Runtime\Activation\ActivationMixerPlayable.cs" />
@@ -678,7 +678,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{5882F765-8E86-2186-C3C4-AE1F39F37969}</Project>
+      <Project>{A3D95F7F-877B-4182-84A8-5015646BADC0}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

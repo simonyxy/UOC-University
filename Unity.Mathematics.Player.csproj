@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7803F32D-1A81-78B5-BA24-7B7D60A3713A}</ProjectGuid>
+    <ProjectGuid>{22BD905F-876B-CE55-5543-C2AEFDBBB159}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Mathematics</AssemblyName>
@@ -64,8 +64,8 @@
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\bool2.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\float4x4.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\int3.gen.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\Noise\common.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\uint4x4.gen.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\Noise\common.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\int4x2.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\half2.gen.cs" />
     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics\bool3x2.gen.cs" />
@@ -693,7 +693,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{5882F765-8E86-2186-C3C4-AE1F39F37969}</Project>
+      <Project>{A3D95F7F-877B-4182-84A8-5015646BADC0}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

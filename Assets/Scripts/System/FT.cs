@@ -10,7 +10,7 @@ public class FT : MonoBehaviour
     [HideInInspector]public StoryMgr SM;
     [HideInInspector]public STimer sTimer;
     [HideInInspector]public SystemTime ST;
-    [HideInInspector]public GameObject uiRoot;
+    public GameObject uiRoot;
     [HideInInspector]public GameObject player;
     private TimerManager timerMgr;
 
@@ -53,7 +53,7 @@ public class FT : MonoBehaviour
         NpcMgr.instance.init();
         FrustratioMgr.instance.init();
 
-        uiRoot = GameObject.Find("UIRoot").gameObject;
+        //uiRoot = GameObject.Find("UIRoot").gameObject;
         mainCam = GameObject.Find("mainCemera").GetComponent<Camera>();
         player = GameObject.Find("Player");
     }

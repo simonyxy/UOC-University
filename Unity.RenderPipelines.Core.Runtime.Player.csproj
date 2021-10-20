@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{429BB7CF-9FFE-F7C0-07E0-0F10B601EC70}</ProjectGuid>
+    <ProjectGuid>{22945669-9207-445F-E41E-4EDDC8A98CD4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.RenderPipelines.Core.Runtime</AssemblyName>
@@ -60,10 +60,10 @@
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Volume\VolumeProfile.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Textures\RTHandle.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Camera\FreeCamera.cs" />
-    <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\RenderGraph\RenderGraphPass.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Common\XRGraphics.cs" />
-    <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Debugging\DebugUI.Panel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\RenderGraph\RenderGraphPass.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\ResourceReloader.cs" />
+    <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Debugging\DebugUI.Panel.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Common\CoreAttributes.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Debugging\Prefabs\Scripts\DebugUIHandlerVector3.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Debugging\Prefabs\Scripts\DebugUIHandlerIndirectToggle.cs" />
@@ -104,8 +104,8 @@
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\RenderGraph\RenderGraphBuilder.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Debugging\DebugManager.Actions.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Volume\VolumeStack.cs" />
-    <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Debugging\DebugUpdater.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Debugging\Prefabs\Scripts\DebugUIHandlerCanvas.cs" />
+    <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Debugging\DebugUpdater.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\RenderGraph\RenderGraphDefaultResources.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Common\IVirtualTexturingEnabledRenderPipeline.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Debugging\Prefabs\Scripts\DebugUIHandlerColor.cs" />
@@ -150,8 +150,8 @@
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Common\GlobalDynamicResolutionSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Debugging\DebugShapes.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\RenderGraph\RenderGraphResourceRegistry.cs" />
-    <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\HableCurve.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\RenderGraph\RenderGraphLogger.cs" />
+    <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Utilities\HableCurve.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Debugging\ProfilingScope.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Debugging\DebugUI.Fields.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Runtime\Common\ObjectPools.cs" />
@@ -707,7 +707,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{5882F765-8E86-2186-C3C4-AE1F39F37969}</Project>
+      <Project>{A3D95F7F-877B-4182-84A8-5015646BADC0}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

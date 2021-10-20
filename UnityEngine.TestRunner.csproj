@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0B7C8A80-AA04-C121-16D5-DF7665AC60EC}</ProjectGuid>
+    <ProjectGuid>{AB9A3AA3-7E35-F52C-7A0F-EA81C831E416}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UnityEngine.TestRunner</AssemblyName>
@@ -102,8 +102,8 @@
     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEngine.TestRunner\Utils\ColorEqualityComparer.cs" />
     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEngine.TestRunner\Assertions\ConstraintsExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEngine.TestRunner\TestRunner\Callbacks\TestResultRendererCallback.cs" />
-    <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEngine.TestRunner\Utils\Vector2EqualityComparer.cs" />
     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEngine.TestRunner\Utils\Utils.cs" />
+    <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEngine.TestRunner\Utils\Vector2EqualityComparer.cs" />
     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEngine.TestRunner\AssemblyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestMustExpectAllLogsAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEngine.TestRunner\Assertions\LogScope\LogEvent.cs" />

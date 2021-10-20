@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E1ED2785-ED9A-F600-2A83-B1C7A35DA0E9}</ProjectGuid>
+    <ProjectGuid>{A3877269-DF78-A1C2-0396-2A19FA797563}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UnityEditor.TestRunner</AssemblyName>
@@ -211,9 +211,9 @@
     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEditor.TestRunner\TestRunner\Utils\TestListCacheData.cs" />
     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEditor.TestRunner\CommandLineTest\RunSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEditor.TestRunner\GUI\TestListTreeView\TestListTreeViewDataSource.cs" />
-    <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEditor.TestRunner\TestLaunchers\TestLauncherBase.cs" />
     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEditor.TestRunner\Api\TestRunnerApi.cs" />
     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEditor.TestRunner\Api\IErrorCallbacks.cs" />
+    <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEditor.TestRunner\TestLaunchers\TestLauncherBase.cs" />
     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.22\UnityEditor.TestRunner\UnityTestProtocol\IUtpLogger.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -812,7 +812,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{0B7C8A80-AA04-C121-16D5-DF7665AC60EC}</Project>
+      <Project>{AB9A3AA3-7E35-F52C-7A0F-EA81C831E416}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CD9038B7-03F4-F7EC-208D-D70977D8DB57}</ProjectGuid>
+    <ProjectGuid>{B7D35BF1-4BB7-924A-0077-A9AD14102999}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.RenderPipelines.Core.Editor</AssemblyName>
@@ -106,8 +106,8 @@
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\Lighting\IESEngine.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\Volume\Drawers\ColorParameterDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\Utilities\SerializedBitArray.cs" />
-    <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\Volume\VolumeProfileFactory.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\LookDev\CameraController.cs" />
+    <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\Volume\VolumeProfileFactory.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\Volume\VolumeMenuItems.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\ContextualMenuDispatcher.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\Volume\VolumeParameterDrawer.cs" />
@@ -365,11 +365,11 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
-    </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
       <HintPath>Assets\Plugins\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -728,23 +728,23 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{91AC1DF4-625F-902C-DA75-CF3EE57D54FE}</Project>
+      <Project>{A0238128-1645-B307-5B72-735CC3B8D076}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{6C1B794D-1D53-6C6C-EE1C-A0D423459961}</Project>
+      <Project>{AE3AB09D-D87A-2BF2-2DC6-D520CBECB2C9}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{5882F765-8E86-2186-C3C4-AE1F39F37969}</Project>
+      <Project>{A3D95F7F-877B-4182-84A8-5015646BADC0}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{0B7C8A80-AA04-C121-16D5-DF7665AC60EC}</Project>
+      <Project>{AB9A3AA3-7E35-F52C-7A0F-EA81C831E416}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{E1ED2785-ED9A-F600-2A83-B1C7A35DA0E9}</Project>
+      <Project>{A3877269-DF78-A1C2-0396-2A19FA797563}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

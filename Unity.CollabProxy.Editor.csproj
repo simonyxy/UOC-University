@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{96DF7B9A-3CC7-C3C4-1437-8E0DDEEDBF80}</ProjectGuid>
+    <ProjectGuid>{23190197-3B75-AA73-1CA4-09FB3F808934}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.CollabProxy.Editor</AssemblyName>
@@ -68,8 +68,8 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Models\HistoryModel.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Presenters\StartPresenter.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Components\ChangeListElements\ToggleableChangeListElement.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Components\TextButton.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Views\ChangesTabPageView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Components\TextButton.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Models\IHistoryModel.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Presenters\IHistoryPresenter.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Utilities\OpenLinksUtility.cs" />
@@ -131,8 +131,8 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Models\IStartModel.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Components\ChangeEntryGroup.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Settings\CollabSetting.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Settings\CollabSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Models\Structures\IChangeEntry.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Settings\CollabSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Views\Adapters\ListAdapters\BaseListAdapter.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Models\Enums\ProjectStatus.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.3.9\Editor\Components\ChangeListElements\ConflictedChangeListElement.cs" />
@@ -425,11 +425,11 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
-    </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
       <HintPath>Assets\Plugins\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@10.3.2\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -788,19 +788,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{6C1B794D-1D53-6C6C-EE1C-A0D423459961}</Project>
+      <Project>{AE3AB09D-D87A-2BF2-2DC6-D520CBECB2C9}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{5882F765-8E86-2186-C3C4-AE1F39F37969}</Project>
+      <Project>{A3D95F7F-877B-4182-84A8-5015646BADC0}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{0B7C8A80-AA04-C121-16D5-DF7665AC60EC}</Project>
+      <Project>{AB9A3AA3-7E35-F52C-7A0F-EA81C831E416}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{E1ED2785-ED9A-F600-2A83-B1C7A35DA0E9}</Project>
+      <Project>{A3877269-DF78-A1C2-0396-2A19FA797563}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
