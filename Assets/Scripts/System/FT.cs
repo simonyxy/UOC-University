@@ -9,17 +9,14 @@ public class FT : MonoBehaviour
     [HideInInspector]public static FT ft;
     [HideInInspector]public StoryMgr SM;
     [HideInInspector]public STimer sTimer;
-    [HideInInspector]public SystemTime ST;
+    [HideInInspector]public SystemTime _SystemTime;
     public GameObject uiRoot;
     [HideInInspector]public GameObject player;
-    private TimerManager timerMgr;
 
     //寻路需要的，  物体名 - 物体列表 
     [HideInInspector]public Dictionary<string , GameObject> _MStrToObj = new Dictionary<string , GameObject>(); 
     [HideInInspector]public Camera mainCam;
     
-    ////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////
     [HideInInspector]public int G_day; 
 
     private void Awake(){
@@ -37,11 +34,10 @@ public class FT : MonoBehaviour
         ft = this;
 
         //delay function tool   
-        sTimer = gameObject.AddComponent<STimer>() as STimer;
-        timerMgr = TimerManager.instance; //唤醒
+        sTimer = gameObject.AddComponent<STimer>();
 
         //system time
-        ST = gameObject.AddComponent<SystemTime>() as SystemTime;
+        _SystemTime = gameObject.AddComponent<SystemTime>();
 
         //manager
         new StoryMgr();
@@ -53,7 +49,6 @@ public class FT : MonoBehaviour
         NpcMgr.instance.init();
         FrustratioMgr.instance.init();
 
-        //uiRoot = GameObject.Find("UIRoot").gameObject;
         mainCam = GameObject.Find("mainCemera").GetComponent<Camera>();
         player = GameObject.Find("Player");
     }
@@ -62,9 +57,11 @@ public class FT : MonoBehaviour
     //GameBegin loadConfig 其实只是在XXconfig中初始化的过程
     private void LoadAllConfig()
     {    
+
         //读取游戏数据，当前第几天之类的
         AddNpcConfig();
     }
+
 
     //将npcConfig添加到全局
     private void AddNpcConfig(){
@@ -78,6 +75,7 @@ public class FT : MonoBehaviour
         SEventSystem.EventIns.GAME_LOAD_END.Invoke();
     }
 
+
     //loadPlayer 加载玩家相关
     void LoadAllPlayer(){
         //player config
@@ -85,6 +83,7 @@ public class FT : MonoBehaviour
         PlayerConfig.instance.Init();
         InitPlayer(); //player加载
     }
+
 
     private void InitPlayer(){
         

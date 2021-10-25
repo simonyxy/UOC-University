@@ -5,7 +5,6 @@ using UnityEngine.Playables;
 
 public class TriggerStory : MonoBehaviour
 {
-    private FT ft ;
     public int storyID;
     public int frustratio;
     //private GameObject objCurStory;
@@ -14,8 +13,6 @@ public class TriggerStory : MonoBehaviour
 
     private void Awake(){
 
-        ft = FT.ft;
-        //objCurStory = gameObject;
         timeLineCur = transform.GetComponentInChildren<PlayableDirector>();
         colTrigger = GetComponent<BoxCollider2D>();
     }

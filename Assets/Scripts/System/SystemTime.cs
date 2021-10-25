@@ -10,7 +10,7 @@ public  class SystemTime : MonoBehaviour
     public static SystemTime sysTime;
     //1-21
     private FT ft;
-    public SEventSystem SESins;
+    [HideInInspector]public SEventSystem SESins;
 
     [HideInInspector]private string strglobalTime;    
     [HideInInspector]private int globalTimeNum;

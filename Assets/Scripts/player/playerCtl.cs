@@ -137,6 +137,11 @@ Debug.LogError(" set player state");
         }
     } 
 
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     private bool CheckUIClick(){
 
         PointerEventData eventData = new PointerEventData(EventSystem.current);

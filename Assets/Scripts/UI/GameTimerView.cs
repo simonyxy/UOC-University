@@ -8,7 +8,7 @@ public class GameTimerView : MonoBehaviour
 {
     private FT ft;
     private SEventSystem SESins;
-    private SystemTime sysTime;
+    private SystemTime systemTime;
     private SEventSystem eventIns = SEventSystem.EventIns;
     private Text txtTimer;
     private Text txtTimScale;
@@ -37,6 +37,7 @@ public class GameTimerView : MonoBehaviour
         SESins =SEventSystem.EventIns;
     }
     private void OnEnable() {
+
         SESins.PLAYER_HEALTH_UP.AddListener(updateHealth);
         SESins.PLAYER_HEALTH_DOWN.AddListener(updateHealth);
         SESins.PLAYER_SAD_DOWN.AddListener(updateSad);
@@ -52,7 +53,7 @@ public class GameTimerView : MonoBehaviour
     }
     void Start(){
 
-        sysTime = ft.ST;
+        systemTime = ft._SystemTime;
         btnFast.onClick.AddListener(OnBtnFastClick);
         btnSlow.onClick.AddListener(OnBtnSlowClick);
         btnFrustratio.onClick.AddListener(OnBtnFrustratioClick);
@@ -62,12 +63,12 @@ public class GameTimerView : MonoBehaviour
 
     private void setTxtTimeScale(){
 
-        txtTimScale.text = sysTime.TimeScale.ToString();
+        txtTimScale.text = systemTime.TimeScale.ToString();
     }
 
     private void FixedUpdate() {
 
-        txtTimer.text = sysTime.StrGlobalTime;
+        txtTimer.text = systemTime.StrGlobalTime;
     }
 
     void OnBtnFastClick(){

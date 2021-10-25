@@ -53,7 +53,7 @@ public class playerUICtl : MonoBehaviour
         {
             SelectCircle.SetActive(true);
             playIns.isSelectState = true;
-            ft.ST.SetTimeScaleByBool(true);
+            ft._SystemTime.SetTimeScaleByBool(true);
             //进入选择
             ft.sTimer.New("CheckAndSetSelect",CheckAndSetSelect,-1f,true);
             ft.sTimer.New("UIClickColding",UIClickColding,0.015f);
@@ -62,7 +62,7 @@ public class playerUICtl : MonoBehaviour
 
             SelectCircle.SetActive(false);
             playIns.isSelectState = false;
-            ft.ST.SetTimeScaleByBool(false);
+            ft._SystemTime.SetTimeScaleByBool(false);
             ft.sTimer.New("UIClickColding",UIClickColding,0.015f);
         }
     
