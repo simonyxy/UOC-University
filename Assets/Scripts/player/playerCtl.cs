@@ -69,6 +69,7 @@ public class playerCtl : MonoBehaviour
     //LayerMask
     public LayerMask npcLayer;
     public LayerMask MapUILayer;
+
     private void Awake() {
         
         _playerInstance = this;
@@ -142,7 +143,7 @@ Debug.LogError(" set player state");
     /// 
     /// </summary>
     /// <returns></returns>
-    private bool CheckUIClick(){
+    private bool IsClickUILayer(){
 
         PointerEventData eventData = new PointerEventData(EventSystem.current);
         eventData.pressPosition = Input.mousePosition;
@@ -157,11 +158,16 @@ Debug.LogError(" set player state");
         return false;
     }
     
+
     //鼠标左键点击
     [HideInInspector]public Vector2  tempAIvel;
     List<RaycastResult> raycastResults = new List<RaycastResult>();
     public void CheckLeftMouseClick(){
-        
+
+        //除了普通状态不让检测点击
+        if (_stateMachine.CurrentState != Stnormal)
+            return;
+
         Vector2 p = ft.mainCam.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D[] hits ;
         // hit = Physics2D.Raycast(new Vector2(p.x,p.y),Vector3.forward,5.0f,MapUILayer) ; //点击到mapUI
@@ -175,16 +181,12 @@ Debug.LogError(" set player state");
         }
         
         //if UI Click return 
-        if(CheckUIClick()) 
-        {
+        if(IsClickUILayer()) 
             return;
-        }
-        
+       
         //if map UI click reurn 
         if(UIMgr.instance.isOpenMapUI)
-        {
             return;
-        }
 
         aipath.canMove = true; 
         aipath.destination = ft.mainCam.ScreenToWorldPoint(Input.mousePosition);
@@ -195,6 +197,7 @@ Debug.LogError(" set player state");
 
 
     public void OnDrawGizmos() {
+
         Stnormal.OnDrawGizmos();
     }
 

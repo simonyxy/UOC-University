@@ -23,6 +23,7 @@ public class MutiDialogBehaviour :PlayableBehaviour
     public PlayableGraph playableGraph;
     private bool isClickBegin = false;
 
+
     public override void OnBehaviourPlay(Playable playable, FrameData info )
     {
 
@@ -35,9 +36,9 @@ public class MutiDialogBehaviour :PlayableBehaviour
         if(FT.ft == null)
         return ;
 
-        // mutiDiaLogView.ShowQuestionAndAnser(Qrolename,question,Arolename,answersText,replys,ansewersReply);
         UIMgr.instance.OpenMutiDiaLogView(Qrolename,question,Arolename,answersText,replys,ansewersReply);
     }
+
 
     public override void OnBehaviourPause(Playable playable, FrameData info)
     {   

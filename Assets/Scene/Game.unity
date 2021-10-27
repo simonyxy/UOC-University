@@ -3646,7 +3646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.700514, y: -6.387577, z: -10}
+  m_LocalPosition: {x: 17.903692, y: -10.532167, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1718927191}
@@ -17304,7 +17304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718927189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.030513763, y: -4.2224226, z: 0}
+  m_LocalPosition: {x: -1.2336922, y: -0.07783222, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1953233735}
@@ -17749,8 +17749,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1911525466}
   - component: {fileID: 1911525465}
+  - component: {fileID: 1911525467}
   m_Layer: 0
-  m_Name: FT
+  m_Name: ClientEntrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17772,7 +17773,7 @@ MonoBehaviour:
   sTimer: {fileID: 0}
   _SystemTime: {fileID: 0}
   uiRoot: {fileID: 1898162759}
-  player: {fileID: 0}
+  player: {fileID: 7884978428666549370}
   mainCam: {fileID: 0}
   G_day: 0
 --- !u!4 &1911525466
@@ -17789,6 +17790,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1911525467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911525464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c3d732e56aaf244388d668b87fcee9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GAME_LOAD_END:
+    m_PersistentCalls:
+      m_Calls: []
+  STORY_0:
+    m_PersistentCalls:
+      m_Calls: []
+  BEGIN_STORY:
+    m_PersistentCalls:
+      m_Calls: []
+  PLAYER_CHOSE_UP:
+    m_PersistentCalls:
+      m_Calls: []
+  PLAYER_CHOSE_DOWN:
+    m_PersistentCalls:
+      m_Calls: []
+  PLAYER_CHOSE_LEFT:
+    m_PersistentCalls:
+      m_Calls: []
+  PLAYER_CHOSE_RIGHT:
+    m_PersistentCalls:
+      m_Calls: []
+  TIME_SCALE_FAST:
+    m_PersistentCalls:
+      m_Calls: []
+  TIME_SCALE_SLOW:
+    m_PersistentCalls:
+      m_Calls: []
+  DAY_SWITCH_TIME:
+    m_PersistentCalls:
+      m_Calls: []
+  MAIN_STROY_1:
+    m_PersistentCalls:
+      m_Calls: []
+  PLAYER_HIT_NPC:
+    m_PersistentCalls:
+      m_Calls: []
+  PLAYER_HEALTH_DOWN:
+    m_PersistentCalls:
+      m_Calls: []
+  PLAYER_HEALTH_UP:
+    m_PersistentCalls:
+      m_Calls: []
+  PLAYER_SAD_DOWN:
+    m_PersistentCalls:
+      m_Calls: []
+  PLAYER_SAD_UP:
+    m_PersistentCalls:
+      m_Calls: []
+  IN_TIMELINE_STORY:
+    m_PersistentCalls:
+      m_Calls: []
+  OUT_TINELINE_STORY:
+    m_PersistentCalls:
+      m_Calls: []
+  DIALOG_TIMELINE_NORMAL_CLICK:
+    m_PersistentCalls:
+      m_Calls: []
+  MUTIDIALOG_TIMELINE_NORMAL_CLICK:
+    m_PersistentCalls:
+      m_Calls: []
+  STORY_END_TRIGGER:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1918221730
 GameObject:
   m_ObjectHideFlags: 0

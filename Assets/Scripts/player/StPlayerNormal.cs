@@ -4,7 +4,7 @@ using Pathfinding;
 
 public class StPlayerNormal : IState
 {
-    private readonly playerCtl _playerIns;
+    private readonly playerCtl _player;
     // private static float speed = 1000f;
 
     private Rigidbody2D _rb;
@@ -18,7 +18,7 @@ public class StPlayerNormal : IState
     private bool isClickMouse;
     public StPlayerNormal(playerCtl playerIns,Rigidbody2D rb,Animator anim,IAstarAI aipath)
     {
-        _playerIns = playerIns;
+        _player = playerIns;
         _rb = rb;
         _anim = anim;
         _aipath = aipath; 
@@ -26,37 +26,23 @@ public class StPlayerNormal : IState
     }
 
     void IState.Tick(){
-        
-        _playerIns.HorizontalNum = Input.GetAxis("Horizontal");
-        _playerIns.VerticalNum = Input.GetAxis("Vertical");
-        if(_playerIns.isSelectState)
+
+        _player.HorizontalNum = Input.GetAxis("Horizontal");
+        _player.VerticalNum = Input.GetAxis("Vertical");
+        if(_player.isSelectState)
         {
 
         }
         else
         {
-            checkClcikMouse();
-            
-            if(_playerIns.HorizontalNum ==  0  && _playerIns.VerticalNum == 0 )
-            {
-                if(_aipath.reachedEndOfPath)
-                _playerIns.SetAnimatorMovement(Vector2.zero);
 
-                if(_aipath.canMove)
-                ChangeAnimByAIPath();
-                else{
-                    _playerIns.SetAnimatorMovement(Vector2.zero);
-                }
-            }
-            else
-            {  
-                _playerIns.KeyCodeMove();
-            }
-            _playerIns.CheckSelectPanelClick();
+            checkClickMouse();
+            checkInputKey();
+            
         }
     }
 
-    void checkClcikMouse(){
+    void checkClickMouse(){
 
         if( isClickMouse )
         return; 
@@ -79,9 +65,36 @@ public class StPlayerNormal : IState
     }
 
 
+    /// <summary>
+    /// 检测按下按钮
+    /// </summary>
+    void checkInputKey()
+    {
+
+        if (_player.HorizontalNum == 0 && _player.VerticalNum == 0)
+        {
+            if (_aipath.reachedEndOfPath)
+                _player.SetAnimatorMovement(Vector2.zero);
+
+            if (_aipath.canMove)
+                ChangeAnimByAIPath();
+            else
+            {
+                _player.SetAnimatorMovement(Vector2.zero);
+            }
+        }
+        else
+        {
+            _player.KeyCodeMove();
+        }
+        _player.CheckSelectPanelClick();
+    }
+
+
+
     public void OnDrawGizmos() {
-        boxCenter = (Vector2)_playerIns.transform.position ;
-        tempHitNpc = Physics2D.OverlapCircle(boxCenter, 1, _playerIns.npcLayer);
+        boxCenter = (Vector2)_player.transform.position ;
+        tempHitNpc = Physics2D.OverlapCircle(boxCenter, 1, _player.npcLayer);
         if ( tempHitNpc != null)
         {
             Gizmos.color = Color.red;
@@ -93,19 +106,22 @@ public class StPlayerNormal : IState
         Gizmos.DrawWireSphere(boxCenter,1);
     }
 
-    //开始寻路
+
+    /// <summary>
+    /// 检测鼠标点击
+    /// </summary>
     void CheckClick(int input ){
 
         if (input == 0)
-        {   
+        {
 
-            _playerIns.CheckLeftMouseClick();
+            _player.CheckLeftMouseClick();
         }
         else if(input == 1)
         {
-            
+
             //鼠标右键点击
-            _playerIns.CheckRightMouseClick();
+            _player.CheckRightMouseClick();
         }
     }
 
@@ -122,7 +138,7 @@ public class StPlayerNormal : IState
         else{
             V2aivel.x = 0 ;
         }
-        _playerIns.SetAnimatorMovement(V2aivel);
+        _player.SetAnimatorMovement(V2aivel);
     }
 
 

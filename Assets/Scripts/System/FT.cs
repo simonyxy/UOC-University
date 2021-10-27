@@ -11,7 +11,7 @@ public class FT : MonoBehaviour
     [HideInInspector]public STimer sTimer;
     [HideInInspector]public SystemTime _SystemTime;
     public GameObject uiRoot;
-    [HideInInspector]public GameObject player;
+    public GameObject player;
 
     //寻路需要的，  物体名 - 物体列表 
     [HideInInspector]public Dictionary<string , GameObject> _MStrToObj = new Dictionary<string , GameObject>(); 
@@ -87,7 +87,7 @@ public class FT : MonoBehaviour
 
     private void InitPlayer(){
         
-        player.AddComponent<playerCtl>();
+        player?.AddComponent<playerCtl>();
 
     }
     

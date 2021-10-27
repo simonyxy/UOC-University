@@ -26,11 +26,6 @@ public class StoryMgr : MonoBehaviour
     //dialog p
     public List<string> stroy1Dialog  = new List<string>()
     {
-        "你好",
-        "嗯你好，我是你的舍友卷哥。",
-        "卷哥你好，你是哪里人啊。",
-        "俺是东百的",
-        "东百的都要死"
     };
 
     public int curTIndex = 0;        //用來維護當前事件id
@@ -39,7 +34,6 @@ public class StoryMgr : MonoBehaviour
     public Dictionary<int,Vector2> PosList = new Dictionary<int , Vector2>() ;         // 剧情位置
     public List<string> curDialogList  = new List<string>();          //
     public List<int> curStoryMoveList;   //当前剧情列表
-    // private List<UnityEvent> Ecol = new List<UnityEvent>();  //
     
     public int curStoryID ;
     public GameObject objCurStory;
@@ -48,22 +42,16 @@ public class StoryMgr : MonoBehaviour
     public void Init(){
         
         ft = FT.ft;
-        // Ecol.Add(SEventSystem.EventIns.STORY_0);
     }
 
 
     public void TriggerEvent(int id,GameObject objTrigger)
     {
-    //    if(null!= Ecol[id])
-    //    {
-
-        //    Ecol[id].Invoke();          //triggerEvent
            curStoryID = id;            //save stroy id
            objCurStory = objTrigger;   //trigger object
            curStoryMoveList = story0Move;  //
            curRoleList  = stroy0Role; 
            BeginStory();
-    //    }
     }
 
     //强制劇情開始

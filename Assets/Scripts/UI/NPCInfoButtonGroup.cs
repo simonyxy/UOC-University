@@ -48,6 +48,7 @@ public class NPCInfoButtonGroup : BaseWindow
     // Update is called once per frame
     private void OnInfoClick()
     {
+
         UIMgr.instance.HideWindow("NPCInfoButtonGroup");
         UIMgr.instance.OpenNpcDetailWindow(npcName);
     }

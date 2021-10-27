@@ -1,0 +1,762 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1726182683, guid: a4865f1ab4504ed8a368670db22f409c, type: 3}
+  m_Name: AOTGenerationConfig
+  m_EditorClassIdentifier: 
+  automateBeforeBuilds: 0
+  deleteDllAfterBuilds: 0
+  AutomateForAllAOTPlatforms: 1
+  automateForPlatforms: 
+  lastScan: 637623904969490701
+  supportSerializedTypes:
+  - TypeName: System.UInt64[], mscorlib
+    IsCustom: 1
+    Emit: 1
+  - TypeName: UnityEngine.Bounds, UnityEngine.CoreModule
+    IsCustom: 1
+    Emit: 1
+  - TypeName: UnityEngine.Quaternion, UnityEngine.CoreModule
+    IsCustom: 1
+    Emit: 1
+  - TypeName: GamePlayPointOccupyComponentConfig, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[GamePlayPointAddPointComponentConfig+AddScoreInfo,
+      Common]], mscorlib
+    IsCustom: 1
+    Emit: 1
+  - TypeName: GamePlayPointAddPointComponentConfig+AddScoreInfo, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: GamePlayPointAddPointComponentConfig, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: GamePlayPointPropertyRecoverComponentConfig, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: GamePlayPointRespawnComponentConfig, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: GamePlayPointSpawnComponentConfig, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: GamePlayPointCommitComponentConfig, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: GamePlayPointConfigComponent, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[GamePlayPointConfigComponent, Common]],
+      mscorlib
+    IsCustom: 1
+    Emit: 1
+  - TypeName: Common.Configs.GamePlayPointConfig, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: Common.Configs.GamePlayHardPointConfig, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: Common.Configs.GamePlayDogTagConfig, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: Common.Configs.GamePlayCommonConfig, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[Common.Configs.GamePlayConfigBase+PlayerDeadInfluence+Influence,
+      Common]], mscorlib
+    IsCustom: 1
+    Emit: 1
+  - TypeName: Common.Configs.GamePlayConfigBase+PlayerDeadInfluence+AddScoreInfluence,
+      Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[Common.Configs.GamePlayConfigBase+PlayerDeadInfluence+ScoreInfoMurder,
+      Common]], mscorlib
+    IsCustom: 1
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[Common.Configs.GamePlayConfigBase+PlayerDeadInfluence+ScoreInfoKiller,
+      Common]], mscorlib
+    IsCustom: 1
+    Emit: 1
+  - TypeName: Common.Configs.GamePlayConfigBase+PlayerDeadInfluence+ScoreInfo, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: Common.Configs.GamePlayConfigBase+PlayerDeadInfluence+ScoreInfoMurder,
+      Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: Common.Configs.GamePlayConfigBase+PlayerDeadInfluence+ScoreInfoKiller,
+      Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: Common.Configs.GamePlayConfigBase+PlayerDeadInfluence, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[Common.Configs.GamePlayConfigBase,
+      Common]], mscorlib
+    IsCustom: 1
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[Common.Configs.GamePlayGroupConfig,
+      Common]], mscorlib
+    IsCustom: 1
+    Emit: 1
+  - TypeName: Common.Configs.GamePlayPackageConfig, Common
+    IsCustom: 1
+    Emit: 1
+  - TypeName: System.Byte, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.ComponentConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.ComponentConfigFile, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.GameLogic.ComponentConfigFile, Common],[Common.GameLogic.ComponentConfig,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.GameLogic.DoodadConfigFile, Common],[Common.GameLogic.DoodadConfig,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.GameLogic.PassiveSkillConfigFile,
+      Common],[Common.GameLogic.PassiveSkillConfig, Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.DoodadConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.DoodadConfigFile, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.ESceneIncubatorUnitPointMode, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.ESceneIncubatorUnitType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.ExecuteMode, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[Common.ConfigReference`2[[Common.GameLogic.ComponentConfigFile,
+      Common],[Common.GameLogic.ComponentConfig, Common]], Common]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[System.Single, mscorlib]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[Common.GameLogic.SceneIncubatorUnitConfig,
+      Common]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[UnityEngine.Vector3, UnityEngine.CoreModule]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.TableDefine.LogicTransform, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.MechaType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.MeleeBulletParam, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.MeleeBulletParam+TrailPoint, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.MeleeBulletParam+TrailPoint[], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.PassiveSkillConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.PassiveSkillConfigFile, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SceneBatteryConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SceneIncubatorRoundConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SceneIncubatorUnitConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SceneTriggerConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SceneTriggerType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Configs.ShelterData, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionCloseUI, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionGetSkill, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionOpenUI, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionSetMechaProxy, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.SoAttributeType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.TableDefine.TriggerInfo, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.UAVMovementDefinition, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.UnitConfig+NPCLevel, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: AbilitySystemSetting, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.ActionEnvTaget, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.ActionOnBuffRepeated, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.AnimationCurve, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.ArcBulletTrackParam, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.AuraConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.AuraConfigFile, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: BattleSettings, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: BattleSettings+ScreenDragFactor, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Boolean, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.BoolValueOp, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.BuffConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.BuffConfigFile, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.BuffModifyTarget, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.BuffModifyTarget[], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.BuffTargetState, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.BuffTriggerType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.BulletConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.BulletConfigFile, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.BulletCostType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.BulletCurve, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.BulletTrackParam, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.BulletTrackParam[], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.BulletTriggerType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.ChargeBreakMode, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.ColliderType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.Color, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.ConditionBoolValue, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.ConditionCurrentValue, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigPrefab, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.AuraConfigFile, Common],[Common.AuraConfig,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.AuraConfigFile, Common, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null],[Common.AuraConfig, Common, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null]][], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.GameLogic.BuffConfigFile, Common],[Common.GameLogic.BuffConfig,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.GameLogic.BulletConfigFile, Common],[Common.GameLogic.BulletConfig,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.GameLogic.CrossHairConfigFile, Common],[Common.GameLogic.CrossHairConfig,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.GameLogic.CrossHairConfigFile, Common,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null],[Common.GameLogic.CrossHairConfig,
+      Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]][], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.GameLogic.DashConfigFile, Common],[Common.GameLogic.DashConfig,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.GameLogic.DirectFlyConfigFile, Common],[Common.GameLogic.DirectFlyConfig,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.GameLogic.FlyConfigFile, Common],[Common.GameLogic.FlyConfig,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.LockModeSettingConfigFile, Common],[Common.LockModeSetting,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.GameLogic.PassiveSkillConfigFile,
+      Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null],[Common.GameLogic.PassiveSkillConfig,
+      Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]][], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.GameLogic.SkillConfigFile, Common],[Common.GameLogic.SkillConfig,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.GameLogic.SkillConfigFile, Common,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null],[Common.GameLogic.SkillConfig,
+      Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]][], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.ConfigReference`2[[Common.GameLogic.UnitConfigFile, Common],[Common.GameLogic.UnitConfig,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.CrossHairConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.CrossHairConfig+MagneticSetting, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.CrossHairConfig+MagneticSetting+TargetType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.CrossHairConfigFile, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.DamageType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.DASH_TYPE, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.DashConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.DashConfigFile, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: DestructionSetting, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.DirectFlyConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.DirectFlyConfigFile, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.EAnimSkillState, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.EBulletType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.ECollisionType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.ECurveEvaluateType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: EEntityType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: EntityTypeName, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: EntityTypeName[], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.ETargetSelector, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.FlightBulletParam, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Single, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.FlyConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.FlyConfigFile, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.FormulaOp, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.FormulaValue, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.IBulletTypeParam, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.InheritStates, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Int32, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Int32[], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.InterruptTag, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: IsometricCameraSettings, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.JitterSetting, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.Keyframe, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.Keyframe[], UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.LayerMask, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[Common.Battle.MechaColliderDefinition,
+      Common]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[Common.GameLogic.SkillAction, Common]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[Common.GameLogic.SkillCombatCondition,
+      Common]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.LockModeSetting, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.LockModeSetting+LockTargetCondition, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.LockModeSetting+LockTargetType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.LockModeSetting+LockUIRadiusSetting, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.LockModeSettingConfigFile, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.LogType, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Int64, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.MechaColliderDefinition, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.MechaColliderInfo, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.MechaConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.MovementDefinition, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.ParticleSystem+MinMaxCurve, UnityEngine.ParticleSystemModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.ParticleSystemCurveMode, UnityEngine.ParticleSystemModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.PassiveActionType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.PhysicsBulletTrackParam, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.RealValueOp, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Kingsoft.Engine.SceneDamageType, Engine
+    IsCustom: 0
+    Emit: 1
+  - TypeName: SceneObjectTypeName[], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SceneTowerConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillAction, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionAddAura, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionAddBuff, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionAreaOfEffect, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionDamage, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionDash, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionDebug, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionDirectFly, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionDisableSkill, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionExpire, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionFly, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionSpawn+UavPos, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionSpawnProjectile, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionSpawnProjectile+FakeRandomType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionSpawnProjectile+Vector3Curve, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionSpawnProjectile+Vector3Range, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionSpawnUnit, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionSpendEnergy, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionStopDash, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionStopFly, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionTrigger`1[[Common.GameLogic.BuffTriggerType,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionTrigger`1[[Common.GameLogic.BuffTriggerType,
+      Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]][], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionTrigger`1[[Common.GameLogic.BulletTriggerType,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionTrigger`1[[Common.GameLogic.BulletTriggerType,
+      Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]][], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionTrigger`1[[Common.GameLogic.PassiveActionType,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionTrigger`1[[Common.GameLogic.PassiveActionType,
+      Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]][], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionTrigger`1[[Common.GameLogic.SkillActionType,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionTrigger`1[[Common.GameLogic.SkillActionType,
+      Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]][], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillActionType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillCombatCondition, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillCombatConditionBoolValue, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillCombatConditionCurrentValue, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillConfigFile, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillSlot, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillTriggerMode, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.SkillType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.Space, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.SpeedUpConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.SpeedUpDefinition, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.SpeedUpStage1Definition, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.SpeedUpStage2Definition, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.SpeedUpStage3Definition, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.SpeedUpStage4Definition, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.SpeedUpType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.StopType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.String, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.String[], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.TagDamageType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.TagDamageType[], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.TracingBulletTrackParam, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.TriggerGroup`1[[Common.GameLogic.BuffTriggerType,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.TriggerGroup`1[[Common.GameLogic.BulletTriggerType,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.TriggerGroup`1[[Common.GameLogic.PassiveActionType,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.TriggerGroup`1[[Common.GameLogic.SkillActionType,
+      Common]], Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.UAVConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.UInt32, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.UnitConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.UnitConfigFile, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.Vector2, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.Vector3, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.WarpGateConfig, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.Battle.AI.WeaponType, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Common.GameLogic.WhenToSwitchTrack, Common
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.WrapMode, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1

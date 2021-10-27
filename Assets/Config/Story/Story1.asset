@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5cb2452a39e704b950a58e1e21ac17, type: 3}
   m_Name: Story1
   m_EditorClassIdentifier: 
-  infos: []
+  storyDialogList: []

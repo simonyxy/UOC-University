@@ -65,6 +65,7 @@ public class UIMgr:MonoBehaviour
 /// 、、、、、、、、、、、、、、、、、通用打开不用传参就能开启的界面、、、、、、、、、、、、、、、、、、、、、、、、
     public void OpenWindow(string name)
     {
+
         BaseWindow win ;
         UIconfig.TryGetValue(name,out win);
         if(win == null) return;   
@@ -73,27 +74,25 @@ public class UIMgr:MonoBehaviour
     }
 
 
-
     public void HideWindow(string name)
     {
+
         BaseWindow win ;
-        __openWndCount --;
         UIconfig.TryGetValue(name,out win);
         if(win != null)
         {
             if(playerCtl.PlayerIns != null)
-            {
                 playerCtl.PlayerIns._TigeerSTEvent("CLOSE_VIEW");
-            }
+            
             win.onHide();
         }
         else{
             Debug.LogError("没有这个window ，name：" + name);
         }
+
         __openWndCount = __openWndCount < 0  ? 0 : --__openWndCount ;
     }
-///////////////////////////////end///////////////////////////////////////
-/// 、、、、、、、、、、、、、、、需要参数开启的界面、、、、、、、、、、、、、、、、、、、、、、、、
+
 
     //角色详情界面
     public void OpenNpcDetailWindow(string dataStr)
@@ -113,6 +112,7 @@ public class UIMgr:MonoBehaviour
     //生成点击npc操作界面
     public void InitNPCInfoButtonGroup(Collider2D col ,Vector3 position)
     {
+
         string name = col.gameObject.name;
         InitNPCInfoButtonGroup(name,position);
     } 
@@ -121,7 +121,7 @@ public class UIMgr:MonoBehaviour
     //生成点击npc操作界面
     public void InitNPCInfoButtonGroup(string name ,Vector3 position)
     {   
-        __openWndCount ++;
+
         isOpenMapUI = true;
         curMapUI = "NPCInfoButtonGroup";
         if(!NPCInfoButtonGroup)
@@ -137,6 +137,7 @@ public class UIMgr:MonoBehaviour
     //生成点击npc操作界面
     public void InitSayHiButtonGroup(string name ,Vector3 position)
     {
+
         __openWndCount ++;
         isOpenMapUI =true;
         curMapUI = "NpcSayHiButtonGroup";
@@ -150,14 +151,13 @@ public class UIMgr:MonoBehaviour
     }
 
     public void HideMapUI(){
-        
-        if(curMapUI != "")
-        {
-            HideWindow(curMapUI);
-            curMapUI = "";
-            isOpenMapUI =false;
-            __openWndCount --;
-        }
+
+        if (curMapUI == "")
+            return;
+
+        HideWindow(curMapUI);
+        curMapUI = "";
+        isOpenMapUI =false;
     }
     
 
