@@ -185,6 +185,7 @@ public class SearchUslessComponent : EditorWindow
             EditorGUILayout.ObjectField(result[i],typeof(Object),true,GUILayout.Width(300));
         }
 
+        EditorGUILayout.EndScrollView();
 
 
     }

@@ -29,9 +29,17 @@ public enum DialogPosition
 }
 
 //https://aihailan.com/unity-odin-inspector-tutorials/ herer
+[SerializeField]
+public class DialogInfo
+{
+
+    public Charater charater;
+    public DialogPosition dialogPosition;
+    public string talkInfo;
+}
 
 [Serializable]
-public class DialogInfo
+public class StoryBaseInfo
 {
 
     [OnValueChanged("ChangeMoveType"), GUIColor(0.3f, 1f, 1f)]
@@ -42,16 +50,17 @@ public class DialogInfo
         isDialog = moveType == MoveType.Dialog;
     }
 
+
     [HideInInspector]
     public bool isMove;
     [HideInInspector]
-    public bool isDialog ;
-    [BoxGroup("Talk") , ShowIf("isDialog")]
-    public Charater charater;
-    [BoxGroup("Talk"), ShowIf("isDialog")]
-    public DialogPosition dialogPosition;
-    [BoxGroup("Talk") , ShowIf("isDialog")]
-    public string talkInfo;
+    public bool isDialog;
+
+    //[BoxGroup("Talk"), ShowIf("isDialog")]
+    //public DialogInfo diaLogInfo;
+
+    //[BoxGroup("Move"), ShowIf("isMove")]
+    //public Vector3 desPosition;
 }
 
 [CreateAssetMenu(menuName = "Config/StoryConfig", fileName = "StoryConfigDefault.asset")]
@@ -59,13 +68,13 @@ public class SCStroyConfig : ScriptableObject
 {
 
     [ListDrawerSettings(OnBeginListElementGUI = "BeginDrawListElement", OnEndListElementGUI = "EndDrawListElement")]
-    public List<DialogInfo> storyDialogList;
+    public List<StoryBaseInfo> storyDialogList;
     private void BeginDrawListElement(int index)
     {
         SirenixEditorGUI.BeginBox("ÐÐ¶¯" + index);
     }
-    private void EndDrawListElement(int index)
+    private void EndDrawListElement( int index)
     {
-        SirenixEditorGUI.EndBox();
+
     }
 }
